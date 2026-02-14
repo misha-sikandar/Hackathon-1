@@ -1,0 +1,26 @@
+{
+  "id": "week-03/exercises",
+  "title": "Week 3 Exercises: URDF Modeling and TF Transforms",
+  "description": "This exercise sheet accompanies the Week 3 lessons on URDF modeling and TF transforms. These exercises will help you practice and reinforce your understanding of robot modeling and coordinate transformations in the context of Physical AI systems.",
+  "source": "@site/docs/week-03/exercises.md",
+  "sourceDirName": "week-03",
+  "slug": "/week-03/exercises",
+  "permalink": "/docs/week-03/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "URDF Modeling",
+    "permalink": "/docs/week-03/urdf-modeling"
+  },
+  "next": {
+    "title": "Gazebo Simulation",
+    "permalink": "/docs/week-04/gazebo-simulation"
+  }
+}

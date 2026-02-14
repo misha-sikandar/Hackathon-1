@@ -1,0 +1,26 @@
+{
+  "id": "week-02/exercises",
+  "title": "Week 2 Exercises: ROS 2 Fundamentals",
+  "description": "This exercise sheet accompanies the Week 2 lessons on ROS 2 fundamentals. These exercises will help you practice and reinforce your understanding of nodes, topics, services, and actions in the context of Physical AI systems.",
+  "source": "@site/docs/week-02/exercises.md",
+  "sourceDirName": "week-02",
+  "slug": "/week-02/exercises",
+  "permalink": "/docs/week-02/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "ROS 2 Fundamentals",
+    "permalink": "/docs/week-02/ros2-fundamentals"
+  },
+  "next": {
+    "title": "URDF Modeling",
+    "permalink": "/docs/week-03/urdf-modeling"
+  }
+}

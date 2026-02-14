@@ -1,0 +1,26 @@
+{
+  "id": "week-11/exercises",
+  "title": "Week 11 Exercises: LLM-Based Planning and Cognitive Robotics",
+  "description": "This exercise sheet accompanies the Week 11 lessons on LLM-based planning and cognitive robotics. These exercises will help you practice and reinforce your understanding of using large language models for high-level planning and reasoning in Physical AI systems.",
+  "source": "@site/docs/week-11/exercises.md",
+  "sourceDirName": "week-11",
+  "slug": "/week-11/exercises",
+  "permalink": "/docs/week-11/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 32,
+  "frontMatter": {
+    "sidebar_position": 32
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "LLM Cognitive Planning",
+    "permalink": "/docs/week-11/llm-cognitive-planning"
+  },
+  "next": {
+    "title": "Sim-to-Real Deployment",
+    "permalink": "/docs/week-12/sim-to-real-deployment"
+  }
+}

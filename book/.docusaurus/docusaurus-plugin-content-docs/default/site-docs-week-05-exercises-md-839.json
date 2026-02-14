@@ -1,0 +1,26 @@
+{
+  "id": "week-05/exercises",
+  "title": "Week 5 Exercises: NVIDIA Isaac and Perception Systems",
+  "description": "This exercise sheet accompanies the Week 5 lessons on NVIDIA Isaac and perception systems. These exercises will help you practice and reinforce your understanding of GPU-accelerated perception in Physical AI systems.",
+  "source": "@site/docs/week-05/exercises.md",
+  "sourceDirName": "week-05",
+  "slug": "/week-05/exercises",
+  "permalink": "/docs/week-05/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "sidebar_position": 16
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Perception Systems",
+    "permalink": "/docs/week-05/perception-systems"
+  },
+  "next": {
+    "title": "SLAM & Navigation",
+    "permalink": "/docs/week-06/slam-navigation"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "week-08/manipulation-interaction",
+  "title": "Humanoid Manipulation and Social Interaction",
+  "description": "This lesson explores humanoid manipulation capabilities and social interaction systems. We'll cover dexterous manipulation with anthropomorphic hands, whole-body manipulation strategies, and social interaction protocols that enable natural human-robot collaboration.",
+  "source": "@site/docs/week-08/manipulation-interaction.md",
+  "sourceDirName": "week-08",
+  "slug": "/week-08/manipulation-interaction",
+  "permalink": "/docs/week-08/manipulation-interaction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 33,
+  "frontMatter": {
+    "sidebar_position": 33
+  }
+}

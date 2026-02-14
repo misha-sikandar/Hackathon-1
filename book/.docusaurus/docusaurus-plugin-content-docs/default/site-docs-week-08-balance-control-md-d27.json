@@ -1,0 +1,26 @@
+{
+  "id": "week-08/balance-control",
+  "title": "Balance Control Systems for Humanoid Robots",
+  "description": "This lesson focuses on the critical aspect of balance control in humanoid robots. Maintaining balance is one of the most challenging problems in humanoid robotics, requiring sophisticated control algorithms to manage the robot's center of mass and react to disturbances.",
+  "source": "@site/docs/week-08/balance-control.md",
+  "sourceDirName": "week-08",
+  "slug": "/week-08/balance-control",
+  "permalink": "/docs/week-08/balance-control",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 24,
+  "frontMatter": {
+    "sidebar_position": 24
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Humanoid Locomotion",
+    "permalink": "/docs/week-08/humanoid-locomotion"
+  },
+  "next": {
+    "title": "Week 8 Exercises",
+    "permalink": "/docs/week-08/exercises"
+  }
+}

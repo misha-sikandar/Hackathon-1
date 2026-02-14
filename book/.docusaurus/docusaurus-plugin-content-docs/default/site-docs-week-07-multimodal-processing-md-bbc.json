@@ -1,0 +1,26 @@
+{
+  "id": "week-07/multimodal-processing",
+  "title": "Week 7: Vision-Language-Action (VLA) Systems",
+  "description": "This week, we'll explore Vision-Language-Action (VLA) systems, which represent a breakthrough in embodied AI by integrating visual perception, natural language understanding, and physical action in unified frameworks. VLA systems enable robots to understand complex natural language commands and execute them in real-world environments.",
+  "source": "@site/docs/week-07/multimodal-processing.md",
+  "sourceDirName": "week-07",
+  "slug": "/week-07/multimodal-processing",
+  "permalink": "/docs/week-07/multimodal-processing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "sidebar_position": 22
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "VLA Introduction",
+    "permalink": "/docs/week-07/vla-introduction"
+  },
+  "next": {
+    "title": "Week 7 Exercises",
+    "permalink": "/docs/week-07/exercises"
+  }
+}

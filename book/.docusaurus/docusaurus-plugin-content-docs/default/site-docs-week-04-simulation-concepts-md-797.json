@@ -1,0 +1,14 @@
+{
+  "id": "week-04/simulation-concepts",
+  "title": "Week 4: Simulation with Gazebo & Unity",
+  "description": "This week, we'll explore simulation environments that are essential for developing and testing Physical AI systems. Simulation allows us to safely test algorithms, validate designs, and train AI systems before deploying on real hardware.",
+  "source": "@site/docs/week-04/simulation-concepts.md",
+  "sourceDirName": "week-04",
+  "slug": "/week-04/simulation-concepts",
+  "permalink": "/docs/week-04/simulation-concepts",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

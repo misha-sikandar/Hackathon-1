@@ -1,0 +1,17 @@
+{
+  "id": "week-06/index",
+  "title": "Week 6: Navigation and Path Planning with SLAM",
+  "description": "Welcome to Week 6! This week, we'll explore navigation and path planning systems for robots, including Simultaneous Localization and Mapping (SLAM). You'll learn how robots can navigate unknown environments, build maps, and plan safe paths to their destinations.",
+  "source": "@site/docs/week-06/index.md",
+  "sourceDirName": "week-06",
+  "slug": "/week-06/",
+  "permalink": "/docs/week-06/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 23,
+  "frontMatter": {
+    "sidebar_position": 23
+  }
+}

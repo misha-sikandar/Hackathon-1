@@ -1,0 +1,217 @@
+openapi: 3.0.0
+info:
+  title: Physical AI Robot Control API
+  description: API for controlling simulated and physical robots in the Physical AI & Humanoid Robotics book
+  version: 1.0.0
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: http://localhost:8080
+    description: Local development server for simulation
+  - url: https://robot-api.example.com
+    description: Production server for physical robots
+paths:
+  /robots/{robotId}/control:
+    post:
+      summary: Send control command to robot
+      description: Send a movement or action command to a specific robot
+      parameters:
+        - name: robotId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the robot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ControlCommand'
+      responses:
+        '200':
+          description: Command accepted and sent to robot
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommandResponse'
+        '400':
+          description: Invalid command format
+        '404':
+          description: Robot not found
+        '500':
+          description: Internal server error
+  /robots/{robotId}/sensors:
+    get:
+      summary: Get sensor data from robot
+      description: Retrieve current sensor readings from a specific robot
+      parameters:
+        - name: robotId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the robot
+        - name: sensorTypes
+          in: query
+          required: false
+          schema:
+            type: array
+            items:
+              type: string
+          description: Filter by specific sensor types
+      responses:
+        '200':
+          description: Current sensor readings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorData'
+        '404':
+          description: Robot not found
+        '500':
+          description: Internal server error
+  /robots/{robotId}/navigation/goals:
+    post:
+      summary: Set navigation goal
+      description: Set a navigation goal for the robot to reach
+      parameters:
+        - name: robotId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the robot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NavigationGoal'
+      responses:
+        '200':
+          description: Navigation goal accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NavigationResponse'
+        '400':
+          description: Invalid navigation goal format
+        '404':
+          description: Robot not found
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    ControlCommand:
+      type: object
+      required:
+        - type
+        - parameters
+      properties:
+        type:
+          type: string
+          enum: [move, rotate, grip, release, speak, listen]
+          description: Type of control command
+        parameters:
+          type: object
+          description: Command-specific parameters
+          additionalProperties: true
+        timestamp:
+          type: string
+          format: date-time
+          description: When the command was issued
+    CommandResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether the command was successful
+        messageId:
+          type: string
+          description: Unique identifier for the command
+        estimatedCompletion:
+          type: string
+          format: date-time
+          description: When the command is expected to complete
+        error:
+          type: string
+          description: Error message if command failed
+    SensorData:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: When the data was collected
+        sensors:
+          type: object
+          additionalProperties: true
+          description: Sensor-specific data
+        batteryLevel:
+          type: number
+          minimum: 0
+          maximum: 100
+          description: Battery charge percentage
+    NavigationGoal:
+      type: object
+      required:
+        - x
+        - y
+        - theta
+      properties:
+        x:
+          type: number
+          description: X coordinate in map frame
+        y:
+          type: number
+          description: Y coordinate in map frame
+        theta:
+          type: number
+          description: Orientation angle in radians
+        frame:
+          type: string
+          default: map
+          description: Coordinate frame for the goal
+        tolerance:
+          type: number
+          default: 0.5
+          description: Distance tolerance for goal completion
+    NavigationResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether the goal was accepted
+        path:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pose'
+          description: Planned path to goal
+        estimatedTime:
+          type: number
+          description: Estimated time to reach goal in seconds
+    Pose:
+      type: object
+      properties:
+        x:
+          type: number
+          description: X coordinate
+        y:
+          type: number
+          description: Y coordinate
+        z:
+          type: number
+          description: Z coordinate
+        orientation:
+          type: object
+          properties:
+            x:
+              type: number
+            y:
+              type: number
+            z:
+              type: number
+            w:
+              type: number

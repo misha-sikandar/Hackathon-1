@@ -1,0 +1,26 @@
+{
+  "id": "week-04/exercises",
+  "title": "Week 4 Exercises: Simulation with Gazebo & Unity",
+  "description": "This exercise sheet accompanies the Week 4 lessons on simulation environments for Physical AI systems. These exercises will help you practice and reinforce your understanding of Gazebo and Unity for creating digital twins.",
+  "source": "@site/docs/week-04/exercises.md",
+  "sourceDirName": "week-04",
+  "slug": "/week-04/exercises",
+  "permalink": "/docs/week-04/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "sidebar_position": 13
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Unity Integration",
+    "permalink": "/docs/week-04/unity-integration"
+  },
+  "next": {
+    "title": "Isaac Sim Overview",
+    "permalink": "/docs/week-05/isaac-sim-overview"
+  }
+}

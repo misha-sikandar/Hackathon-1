@@ -1,0 +1,26 @@
+{
+  "id": "week-10/exercises",
+  "title": "Week 10 Exercises: Conversational Robotics",
+  "description": "This exercise sheet accompanies the Week 10 lessons on conversational robotics. These exercises will help you practice and reinforce your understanding of natural language processing and human-robot interaction in Physical AI systems.",
+  "source": "@site/docs/week-10/exercises.md",
+  "sourceDirName": "week-10",
+  "slug": "/week-10/exercises",
+  "permalink": "/docs/week-10/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "sidebar_position": 30
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Conversational Robots",
+    "permalink": "/docs/week-10/conversational-robots"
+  },
+  "next": {
+    "title": "LLM Cognitive Planning",
+    "permalink": "/docs/week-11/llm-cognitive-planning"
+  }
+}

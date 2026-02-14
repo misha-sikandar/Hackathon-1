@@ -1,0 +1,26 @@
+{
+  "id": "week-03/urdf-modeling",
+  "title": "Week 3: Robot Modeling with URDF",
+  "description": "Welcome to Week 3 of our Physical AI & Humanoid Robotics journey! This week, we'll explore URDF (Unified Robot Description Format), the standard for representing robot models in ROS. URDF is essential for defining the physical and visual properties of robots, which is fundamental for simulation, visualization, and control in Physical AI systems.",
+  "source": "@site/docs/week-03/urdf-modeling.md",
+  "sourceDirName": "week-03",
+  "slug": "/week-03/urdf-modeling",
+  "permalink": "/docs/week-03/urdf-modeling",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 2 Exercises",
+    "permalink": "/docs/week-02/exercises"
+  },
+  "next": {
+    "title": "Week 3 Exercises",
+    "permalink": "/docs/week-03/exercises"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "week-04/unity-integration",
+  "title": "Unity Integration for Digital Twins in Physical AI",
+  "description": "This lesson focuses on Unity as a platform for creating high-fidelity digital twins for Physical AI systems. Unity offers photorealistic rendering and advanced physics simulation capabilities that complement traditional robotics simulators like Gazebo.",
+  "source": "@site/docs/week-04/unity-integration.md",
+  "sourceDirName": "week-04",
+  "slug": "/week-04/unity-integration",
+  "permalink": "/docs/week-04/unity-integration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "sidebar_position": 12
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Gazebo Simulation",
+    "permalink": "/docs/week-04/gazebo-simulation"
+  },
+  "next": {
+    "title": "Week 4 Exercises",
+    "permalink": "/docs/week-04/exercises"
+  }
+}

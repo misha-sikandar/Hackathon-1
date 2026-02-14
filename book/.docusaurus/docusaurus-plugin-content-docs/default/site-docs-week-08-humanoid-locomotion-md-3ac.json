@@ -1,0 +1,26 @@
+{
+  "id": "week-08/humanoid-locomotion",
+  "title": "Week 8: Humanoid Locomotion and Balance Control",
+  "description": "Welcome to Week 8 of our Physical AI & Humanoid Robotics journey! This week, we'll explore the complex challenges of humanoid locomotion and balance control. Humanoid robots face unique challenges in maintaining stability while performing dynamic movements, making locomotion one of the most difficult problems in robotics.",
+  "source": "@site/docs/week-08/humanoid-locomotion.md",
+  "sourceDirName": "week-08",
+  "slug": "/week-08/humanoid-locomotion",
+  "permalink": "/docs/week-08/humanoid-locomotion",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 23,
+  "frontMatter": {
+    "sidebar_position": 23
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 7 Exercises",
+    "permalink": "/docs/week-07/exercises"
+  },
+  "next": {
+    "title": "Balance Control",
+    "permalink": "/docs/week-08/balance-control"
+  }
+}

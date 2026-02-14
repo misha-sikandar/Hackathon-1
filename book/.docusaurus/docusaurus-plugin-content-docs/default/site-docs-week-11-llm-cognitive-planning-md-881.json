@@ -1,0 +1,26 @@
+{
+  "id": "week-11/llm-cognitive-planning",
+  "title": "Week 11: LLM-Based Planning and Cognitive Robotics",
+  "description": "Welcome to Week 11 of our Physical AI & Humanoid Robotics journey! This week, we'll explore how Large Language Models (LLMs) can be used for high-level planning and cognitive reasoning in robotic systems. This represents a significant advancement in embodied AI, where robots can understand and execute complex, natural language instructions.",
+  "source": "@site/docs/week-11/llm-cognitive-planning.md",
+  "sourceDirName": "week-11",
+  "slug": "/week-11/llm-cognitive-planning",
+  "permalink": "/docs/week-11/llm-cognitive-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 31,
+  "frontMatter": {
+    "sidebar_position": 31
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 10 Exercises",
+    "permalink": "/docs/week-10/exercises"
+  },
+  "next": {
+    "title": "Week 11 Exercises",
+    "permalink": "/docs/week-11/exercises"
+  }
+}

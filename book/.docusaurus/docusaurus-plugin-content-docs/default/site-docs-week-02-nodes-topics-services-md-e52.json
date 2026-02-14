@@ -1,0 +1,17 @@
+{
+  "id": "week-02/nodes-topics-services",
+  "title": "Core ROS 2 Concepts: Nodes, Topics, Services, and Actions",
+  "description": "In this lesson, we'll dive deeper into the fundamental communication patterns in ROS 2. Understanding these concepts is crucial for building modular, scalable robotic systems that embody the principles of Physical AI.",
+  "source": "@site/docs/week-02/nodes-topics-services.md",
+  "sourceDirName": "week-02",
+  "slug": "/week-02/nodes-topics-services",
+  "permalink": "/docs/week-02/nodes-topics-services",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "week-01/theory-foundations",
+  "title": "Theory Foundations: Embodied Intelligence",
+  "description": "This lesson delves deep into the theoretical foundations of embodied intelligence, examining the philosophical and mathematical underpinnings that distinguish Physical AI from traditional digital AI systems.",
+  "source": "@site/docs/week-01/theory-foundations.md",
+  "sourceDirName": "week-01",
+  "slug": "/week-01/theory-foundations",
+  "permalink": "/docs/week-01/theory-foundations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  }
+}

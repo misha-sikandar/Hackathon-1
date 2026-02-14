@@ -1,0 +1,273 @@
+{
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/docs-e43": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docsaba-d7c"
+    }
+  },
+  "/docs-26b": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---docs-005-788"
+  },
+  "/docs-605": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/-0ee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-c-37-4d0"
+  },
+  "/docs/examples/-92c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-examples-372-823"
+  },
+  "/docs/exercises/weekly-exercises-7ba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-exercises-weekly-exercisese-46-6f9"
+  },
+  "/docs/intro-058": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/intro/-45d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-7-a-4-831"
+  },
+  "/docs/intro/overview-8f3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-overview-063-47a"
+  },
+  "/docs/intro/setup-187": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-setup-69-f-a7a"
+  },
+  "/docs/syllabus-1c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-syllabus-016-781"
+  },
+  "/docs/week-01/-a39": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-01-b-03-f45"
+  },
+  "/docs/week-01/exercises-c36": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-01-exercises-970-bbe"
+  },
+  "/docs/week-01/theory-foundations-3c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-01-theory-foundations-13-c-509"
+  },
+  "/docs/week-02/-e96": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-02-869-04b"
+  },
+  "/docs/week-02/exercises-788": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-02-exercises-1-f-1-a42"
+  },
+  "/docs/week-02/nodes-topics-services-c78": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-02-nodes-topics-servicese-52-ac4"
+  },
+  "/docs/week-02/ros2-fundamentals-49a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-02-ros-2-fundamentals-17-e-528"
+  },
+  "/docs/week-03/-c51": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-03-cf-4-e53"
+  },
+  "/docs/week-03/exercises-427": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-03-exercisesf-40-085"
+  },
+  "/docs/week-03/tf-transforms-59b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-03-tf-transformsb-50-eb0"
+  },
+  "/docs/week-03/urdf-modeling-5fd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-03-urdf-modeling-6-ff-16a"
+  },
+  "/docs/week-04/-f6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-04-07-b-a39"
+  },
+  "/docs/week-04/exercises-be9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-04-exercises-380-ab5"
+  },
+  "/docs/week-04/gazebo-simulation-4ce": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-04-gazebo-simulatione-2-d-a62"
+  },
+  "/docs/week-04/simulation-concepts-6c5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-04-simulation-concepts-797-010"
+  },
+  "/docs/week-04/unity-integration-0ef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-04-unity-integrationa-6-e-977"
+  },
+  "/docs/week-05/-d07": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-05-901-8a9"
+  },
+  "/docs/week-05/exercises-da7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-05-exercises-839-567"
+  },
+  "/docs/week-05/isaac-sim-overview-384": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-05-isaac-sim-overview-2-cd-2e8"
+  },
+  "/docs/week-05/perception-systems-dd9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-05-perception-systems-68-d-bb8"
+  },
+  "/docs/week-06/-3b3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-06-9-c-4-e26"
+  },
+  "/docs/week-06/exercises-9f1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-06-exercisesb-45-a0d"
+  },
+  "/docs/week-06/path-planning-327": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-06-path-planning-105-f31"
+  },
+  "/docs/week-06/slam-navigation-741": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-06-slam-navigation-338-c24"
+  },
+  "/docs/week-07/-7b6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-07-733-159"
+  },
+  "/docs/week-07/exercises-2dd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-07-exercises-75-c-ce1"
+  },
+  "/docs/week-07/multimodal-processing-6aa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-07-multimodal-processingbbc-f57"
+  },
+  "/docs/week-07/vla-introduction-211": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-07-vla-introductionbad-d0f"
+  },
+  "/docs/week-08/-03d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-08-a-97-66c"
+  },
+  "/docs/week-08/balance-control-b70": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-08-balance-controld-27-c7a"
+  },
+  "/docs/week-08/exercises-b48": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-08-exercises-1-f-7-ddd"
+  },
+  "/docs/week-08/humanoid-locomotion-038": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-08-humanoid-locomotion-3-ac-780"
+  },
+  "/docs/week-08/manipulation-interaction-5f8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-08-manipulation-interaction-09-e-feb"
+  },
+  "/docs/week-09/exercises-eaa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-09-exercises-753-fab"
+  },
+  "/docs/week-09/grasp-planning-569": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-09-grasp-planning-9-e-5-c4e"
+  },
+  "/docs/week-09/manipulation-basics-ad6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-09-manipulation-basics-143-74c"
+  },
+  "/docs/week-10/conversational-robots-09c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-10-conversational-robotsb-0-f-79e"
+  },
+  "/docs/week-10/exercises-9a4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-10-exercises-426-ccc"
+  },
+  "/docs/week-11/exercises-5dd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-11-exercisesc-09-d8d"
+  },
+  "/docs/week-11/llm-cognitive-planning-3f1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-11-llm-cognitive-planning-881-75b"
+  },
+  "/docs/week-12/exercises-413": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-12-exercises-8-ca-336"
+  },
+  "/docs/week-12/sim-to-real-deployment-477": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-12-sim-to-real-deploymentedf-4ad"
+  },
+  "/docs/week-13/capstone-project-9bc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-13-capstone-project-77-f-272"
+  },
+  "/docs/week-13/exercises-9b3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-week-13-exercisese-30-f25"
+  },
+  "/-fd5": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---a-74-9d6"
+    },
+    "content": "content---e-7-c-0a5"
+  }
+}

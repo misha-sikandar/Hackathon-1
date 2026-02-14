@@ -1,0 +1,26 @@
+{
+  "id": "week-07/exercises",
+  "title": "Week 7 Exercises: Vision-Language-Action Systems",
+  "description": "This exercise sheet accompanies the Week 7 lessons on Vision-Language-Action (VLA) systems. These exercises will help you practice and reinforce your understanding of multimodal processing in Physical AI systems.",
+  "source": "@site/docs/week-07/exercises.md",
+  "sourceDirName": "week-07",
+  "slug": "/week-07/exercises",
+  "permalink": "/docs/week-07/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "sidebar_position": 22
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Multimodal Processing",
+    "permalink": "/docs/week-07/multimodal-processing"
+  },
+  "next": {
+    "title": "Humanoid Locomotion",
+    "permalink": "/docs/week-08/humanoid-locomotion"
+  }
+}

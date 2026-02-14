@@ -1,0 +1,26 @@
+{
+  "id": "week-10/conversational-robots",
+  "title": "Week 10: Conversational Robotics and Natural Language Interaction",
+  "description": "Welcome to Week 10 of our Physical AI & Humanoid Robotics journey! This week, we'll explore conversational robotics, which enables robots to interact with humans through natural language. This capability is essential for creating intuitive, accessible robotic systems that can collaborate effectively with humans.",
+  "source": "@site/docs/week-10/conversational-robots.md",
+  "sourceDirName": "week-10",
+  "slug": "/week-10/conversational-robots",
+  "permalink": "/docs/week-10/conversational-robots",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 29,
+  "frontMatter": {
+    "sidebar_position": 29
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 9 Exercises",
+    "permalink": "/docs/week-09/exercises"
+  },
+  "next": {
+    "title": "Week 10 Exercises",
+    "permalink": "/docs/week-10/exercises"
+  }
+}

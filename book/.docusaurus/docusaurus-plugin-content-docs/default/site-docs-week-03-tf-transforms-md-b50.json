@@ -1,0 +1,17 @@
+{
+  "id": "week-03/tf-transforms",
+  "title": "Coordinate Transforms (TF) in Physical AI Systems",
+  "description": "In this lesson, we'll explore the Transform (TF) system in ROS, which is essential for understanding spatial relationships in Physical AI systems. TF allows us to track and transform data between different coordinate frames, which is crucial for perception, navigation, and manipulation tasks.",
+  "source": "@site/docs/week-03/tf-transforms.md",
+  "sourceDirName": "week-03",
+  "slug": "/week-03/tf-transforms",
+  "permalink": "/docs/week-03/tf-transforms",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  }
+}

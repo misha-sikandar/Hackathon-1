@@ -1,0 +1,17 @@
+{
+  "id": "intro/index",
+  "title": "Introduction to Physical AI & Humanoid Robotics",
+  "description": "Welcome to \"Physical AI & Humanoid Robotics: Embodied Intelligence in the Real World\". This comprehensive 13-week curriculum bridges the gap between digital AI models and physical humanoid robots, teaching you how to design, simulate, and deploy embodied AI systems.",
+  "source": "@site/docs/intro/index.md",
+  "sourceDirName": "intro",
+  "slug": "/intro/",
+  "permalink": "/docs/intro/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  }
+}

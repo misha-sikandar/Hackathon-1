@@ -1,0 +1,26 @@
+{
+  "id": "week-12/exercises",
+  "title": "Week 12 Exercises: Sim-to-Real Transfer and Deployment",
+  "description": "This exercise sheet accompanies the Week 12 lessons on sim-to-real transfer and deployment. These exercises will help you practice and reinforce your understanding of deploying robotic systems from simulation to real-world environments.",
+  "source": "@site/docs/week-12/exercises.md",
+  "sourceDirName": "week-12",
+  "slug": "/week-12/exercises",
+  "permalink": "/docs/week-12/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 34,
+  "frontMatter": {
+    "sidebar_position": 34
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Sim-to-Real Deployment",
+    "permalink": "/docs/week-12/sim-to-real-deployment"
+  },
+  "next": {
+    "title": "Capstone Project",
+    "permalink": "/docs/week-13/capstone-project"
+  }
+}

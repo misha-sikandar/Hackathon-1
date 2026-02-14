@@ -1,0 +1,26 @@
+{
+  "id": "week-09/grasp-planning",
+  "title": "Grasp Planning and Execution in Robotic Manipulation",
+  "description": "This lesson focuses on the critical aspect of grasp planning and execution in robotic manipulation. Grasp planning involves determining how to securely hold an object, which is fundamental for any manipulation task.",
+  "source": "@site/docs/week-09/grasp-planning.md",
+  "sourceDirName": "week-09",
+  "slug": "/week-09/grasp-planning",
+  "permalink": "/docs/week-09/grasp-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 27,
+  "frontMatter": {
+    "sidebar_position": 27
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Manipulation Basics",
+    "permalink": "/docs/week-09/manipulation-basics"
+  },
+  "next": {
+    "title": "Week 9 Exercises",
+    "permalink": "/docs/week-09/exercises"
+  }
+}

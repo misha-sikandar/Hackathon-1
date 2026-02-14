@@ -1,0 +1,23 @@
+{
+  "id": "week-01/index",
+  "title": "Week 1: Introduction to Physical AI",
+  "description": "Welcome to the first week of our Physical AI & Humanoid Robotics course! This week, we'll establish the foundational concepts that will guide us through the entire course.",
+  "source": "@site/docs/week-01/index.md",
+  "sourceDirName": "week-01",
+  "slug": "/week-01/",
+  "permalink": "/docs/week-01/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Course Syllabus",
+    "permalink": "/docs/syllabus"
+  },
+  "next": {
+    "title": "Week 1 Exercises",
+    "permalink": "/docs/week-01/exercises"
+  }
+}

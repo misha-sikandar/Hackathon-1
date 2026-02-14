@@ -1,0 +1,17 @@
+{
+  "id": "week-05/index",
+  "title": "Week 5: AI Robot Brain with NVIDIA Isaac",
+  "description": "Welcome to Week 5! This week, we'll explore NVIDIA Isaac, a comprehensive robotics platform that provides GPU-accelerated simulation, perception, and manipulation capabilities. You'll learn how to leverage Isaac for building AI-powered robot brains that can perceive, reason, and act in complex environments.",
+  "source": "@site/docs/week-05/index.md",
+  "sourceDirName": "week-05",
+  "slug": "/week-05/",
+  "permalink": "/docs/week-05/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 19,
+  "frontMatter": {
+    "sidebar_position": 19
+  }
+}

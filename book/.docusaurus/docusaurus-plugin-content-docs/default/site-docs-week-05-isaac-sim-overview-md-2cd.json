@@ -1,0 +1,23 @@
+{
+  "id": "week-05/isaac-sim-overview",
+  "title": "Week 5: NVIDIA Isaac for Physical AI",
+  "description": "This week, we'll explore NVIDIA Isaac, a comprehensive platform for developing AI-powered robots. NVIDIA Isaac provides GPU-accelerated perception, navigation, and manipulation capabilities that are essential for modern Physical AI systems.",
+  "source": "@site/docs/week-05/isaac-sim-overview.md",
+  "sourceDirName": "week-05",
+  "slug": "/week-05/isaac-sim-overview",
+  "permalink": "/docs/week-05/isaac-sim-overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 4 Exercises",
+    "permalink": "/docs/week-04/exercises"
+  },
+  "next": {
+    "title": "Perception Systems",
+    "permalink": "/docs/week-05/perception-systems"
+  }
+}

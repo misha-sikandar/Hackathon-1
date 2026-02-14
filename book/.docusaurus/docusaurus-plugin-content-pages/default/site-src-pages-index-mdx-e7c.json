@@ -1,0 +1,13 @@
+{
+  "type": "mdx",
+  "permalink": "/",
+  "source": "@site/src/pages/index.mdx",
+  "title": "Physical AI & Humanoid Robotics",
+  "description": "Comprehensive course on Vision-Language-Action systems for embodied intelligence",
+  "frontMatter": {
+    "title": "Physical AI & Humanoid Robotics",
+    "description": "Comprehensive course on Vision-Language-Action systems for embodied intelligence",
+    "hide_table_of_contents": true
+  },
+  "unlisted": false
+}

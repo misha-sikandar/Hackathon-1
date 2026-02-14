@@ -1,0 +1,26 @@
+{
+  "id": "week-02/ros2-fundamentals",
+  "title": "ROS 2 Fundamentals: Practical Implementation Guide",
+  "description": "This guide provides practical examples and implementation details for working with ROS 2 in Physical AI systems. We'll cover common patterns, best practices, and troubleshooting tips.",
+  "source": "@site/docs/week-02/ros2-fundamentals.md",
+  "sourceDirName": "week-02",
+  "slug": "/week-02/ros2-fundamentals",
+  "permalink": "/docs/week-02/ros2-fundamentals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 1 Exercises",
+    "permalink": "/docs/week-01/exercises"
+  },
+  "next": {
+    "title": "Week 2 Exercises",
+    "permalink": "/docs/week-02/exercises"
+  }
+}

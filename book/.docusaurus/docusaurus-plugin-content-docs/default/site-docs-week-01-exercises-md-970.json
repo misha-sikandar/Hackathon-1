@@ -1,0 +1,26 @@
+{
+  "id": "week-01/exercises",
+  "title": "Week 1 Exercises: Exploring Embodied Intelligence",
+  "description": "This week's exercises are designed to help you understand the fundamental concepts of embodied intelligence and apply them to practical scenarios. These exercises combine theoretical reflection with hands-on exploration.",
+  "source": "@site/docs/week-01/exercises.md",
+  "sourceDirName": "week-01",
+  "slug": "/week-01/exercises",
+  "permalink": "/docs/week-01/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Introduction to Physical AI",
+    "permalink": "/docs/week-01/"
+  },
+  "next": {
+    "title": "ROS 2 Fundamentals",
+    "permalink": "/docs/week-02/ros2-fundamentals"
+  }
+}

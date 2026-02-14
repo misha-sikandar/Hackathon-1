@@ -1,0 +1,26 @@
+{
+  "id": "week-06/path-planning",
+  "title": "Path Planning Algorithms for Physical AI Systems",
+  "description": "This lesson focuses on path planning algorithms that enable robots to navigate efficiently and safely in complex environments. Path planning is a critical component of Physical AI systems, bridging the gap between high-level goals and low-level motion control.",
+  "source": "@site/docs/week-06/path-planning.md",
+  "sourceDirName": "week-06",
+  "slug": "/week-06/path-planning",
+  "permalink": "/docs/week-06/path-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "sidebar_position": 18
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "SLAM & Navigation",
+    "permalink": "/docs/week-06/slam-navigation"
+  },
+  "next": {
+    "title": "Week 6 Exercises",
+    "permalink": "/docs/week-06/exercises"
+  }
+}

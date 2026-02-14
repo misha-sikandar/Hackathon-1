@@ -1,0 +1,26 @@
+{
+  "id": "week-13/exercises",
+  "title": "Week 13 Exercises: Capstone Project - Physical AI & Humanoid Robotics Integration",
+  "description": "This exercise sheet accompanies the Week 13 capstone project. This is the culmination of the entire course, where you'll integrate all the concepts learned into a comprehensive Physical AI system.",
+  "source": "@site/docs/week-13/exercises.md",
+  "sourceDirName": "week-13",
+  "slug": "/week-13/exercises",
+  "permalink": "/docs/week-13/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 36,
+  "frontMatter": {
+    "sidebar_position": 36
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Capstone Project",
+    "permalink": "/docs/week-13/capstone-project"
+  },
+  "next": {
+    "title": "All Weekly Exercises",
+    "permalink": "/docs/exercises/weekly-exercises"
+  }
+}

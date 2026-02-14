@@ -1,0 +1,17 @@
+{
+  "id": "week-08/index",
+  "title": "Week 8: Humanoid Locomotion, Manipulation, and Interaction",
+  "description": "Welcome to Week 8! This week, we'll explore humanoid robotics, focusing on the unique challenges of human-like locomotion, manipulation, and social interaction. You'll learn how to design and control robots that move, manipulate objects, and interact with humans in human-centered environments.",
+  "source": "@site/docs/week-08/index.md",
+  "sourceDirName": "week-08",
+  "slug": "/week-08/",
+  "permalink": "/docs/week-08/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 31,
+  "frontMatter": {
+    "sidebar_position": 31
+  }
+}

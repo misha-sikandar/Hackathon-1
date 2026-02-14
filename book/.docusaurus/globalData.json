@@ -1,0 +1,272 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "examples/README",
+              "path": "/docs/examples/",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "exercises/weekly-exercises",
+              "path": "/docs/exercises/weekly-exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/docs/"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "intro/index",
+              "path": "/docs/intro/"
+            },
+            {
+              "id": "intro/overview",
+              "path": "/docs/intro/overview"
+            },
+            {
+              "id": "intro/setup",
+              "path": "/docs/intro/setup"
+            },
+            {
+              "id": "syllabus",
+              "path": "/docs/syllabus",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-01/exercises",
+              "path": "/docs/week-01/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-01/index",
+              "path": "/docs/week-01/",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-01/theory-foundations",
+              "path": "/docs/week-01/theory-foundations"
+            },
+            {
+              "id": "week-02/exercises",
+              "path": "/docs/week-02/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-02/index",
+              "path": "/docs/week-02/"
+            },
+            {
+              "id": "week-02/nodes-topics-services",
+              "path": "/docs/week-02/nodes-topics-services"
+            },
+            {
+              "id": "week-02/ros2-fundamentals",
+              "path": "/docs/week-02/ros2-fundamentals",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-03/exercises",
+              "path": "/docs/week-03/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-03/index",
+              "path": "/docs/week-03/"
+            },
+            {
+              "id": "week-03/tf-transforms",
+              "path": "/docs/week-03/tf-transforms"
+            },
+            {
+              "id": "week-03/urdf-modeling",
+              "path": "/docs/week-03/urdf-modeling",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-04/exercises",
+              "path": "/docs/week-04/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-04/gazebo-simulation",
+              "path": "/docs/week-04/gazebo-simulation",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-04/index",
+              "path": "/docs/week-04/"
+            },
+            {
+              "id": "week-04/simulation-concepts",
+              "path": "/docs/week-04/simulation-concepts"
+            },
+            {
+              "id": "week-04/unity-integration",
+              "path": "/docs/week-04/unity-integration",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-05/exercises",
+              "path": "/docs/week-05/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-05/index",
+              "path": "/docs/week-05/"
+            },
+            {
+              "id": "week-05/isaac-sim-overview",
+              "path": "/docs/week-05/isaac-sim-overview",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-05/perception-systems",
+              "path": "/docs/week-05/perception-systems",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-06/exercises",
+              "path": "/docs/week-06/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-06/index",
+              "path": "/docs/week-06/"
+            },
+            {
+              "id": "week-06/path-planning",
+              "path": "/docs/week-06/path-planning",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-06/slam-navigation",
+              "path": "/docs/week-06/slam-navigation",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-07/exercises",
+              "path": "/docs/week-07/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-07/index",
+              "path": "/docs/week-07/"
+            },
+            {
+              "id": "week-07/multimodal-processing",
+              "path": "/docs/week-07/multimodal-processing",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-07/vla-introduction",
+              "path": "/docs/week-07/vla-introduction",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-08/balance-control",
+              "path": "/docs/week-08/balance-control",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-08/exercises",
+              "path": "/docs/week-08/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-08/humanoid-locomotion",
+              "path": "/docs/week-08/humanoid-locomotion",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-08/index",
+              "path": "/docs/week-08/"
+            },
+            {
+              "id": "week-08/manipulation-interaction",
+              "path": "/docs/week-08/manipulation-interaction"
+            },
+            {
+              "id": "week-09/exercises",
+              "path": "/docs/week-09/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-09/grasp-planning",
+              "path": "/docs/week-09/grasp-planning",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-09/manipulation-basics",
+              "path": "/docs/week-09/manipulation-basics",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-10/conversational-robots",
+              "path": "/docs/week-10/conversational-robots",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-10/exercises",
+              "path": "/docs/week-10/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-11/exercises",
+              "path": "/docs/week-11/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-11/llm-cognitive-planning",
+              "path": "/docs/week-11/llm-cognitive-planning",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-12/exercises",
+              "path": "/docs/week-12/exercises",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-12/sim-to-real-deployment",
+              "path": "/docs/week-12/sim-to-real-deployment",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-13/capstone-project",
+              "path": "/docs/week-13/capstone-project",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "week-13/exercises",
+              "path": "/docs/week-13/exercises",
+              "sidebar": "docsSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docsSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "Home"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

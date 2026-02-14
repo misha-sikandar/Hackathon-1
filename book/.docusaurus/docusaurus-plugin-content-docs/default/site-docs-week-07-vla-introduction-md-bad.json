@@ -1,0 +1,26 @@
+{
+  "id": "week-07/vla-introduction",
+  "title": "Week 7: Vision-Language-Action (VLA) Robotics",
+  "description": "Welcome to Week 7 of our Physical AI & Humanoid Robotics journey! This week, we'll explore Vision-Language-Action (VLA) systems, which represent a significant advancement in embodied AI. VLA systems integrate visual perception, natural language understanding, and physical action, enabling robots to interpret complex human instructions and execute them in real-world environments.",
+  "source": "@site/docs/week-07/vla-introduction.md",
+  "sourceDirName": "week-07",
+  "slug": "/week-07/vla-introduction",
+  "permalink": "/docs/week-07/vla-introduction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "sidebar_position": 20
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 6 Exercises",
+    "permalink": "/docs/week-06/exercises"
+  },
+  "next": {
+    "title": "Multimodal Processing",
+    "permalink": "/docs/week-07/multimodal-processing"
+  }
+}

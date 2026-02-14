@@ -1,0 +1,26 @@
+{
+  "id": "week-12/sim-to-real-deployment",
+  "title": "Week 12: Sim-to-Real Transfer and Deployment",
+  "description": "Welcome to Week 12 of our Physical AI & Humanoid Robotics journey! This week, we'll explore the critical challenge of transferring systems from simulation to real-world deployment. This is one of the most important aspects of Physical AI, as the ultimate goal is to create robots that can operate effectively in the real world.",
+  "source": "@site/docs/week-12/sim-to-real-deployment.md",
+  "sourceDirName": "week-12",
+  "slug": "/week-12/sim-to-real-deployment",
+  "permalink": "/docs/week-12/sim-to-real-deployment",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 33,
+  "frontMatter": {
+    "sidebar_position": 33
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 11 Exercises",
+    "permalink": "/docs/week-11/exercises"
+  },
+  "next": {
+    "title": "Week 12 Exercises",
+    "permalink": "/docs/week-12/exercises"
+  }
+}

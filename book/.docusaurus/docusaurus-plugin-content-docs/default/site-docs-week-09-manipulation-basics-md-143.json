@@ -1,0 +1,26 @@
+{
+  "id": "week-09/manipulation-basics",
+  "title": "Week 9: Manipulation and Grasping",
+  "description": "Welcome to Week 9 of our Physical AI & Humanoid Robotics journey! This week, we'll explore the fascinating world of robotic manipulation and grasping. Manipulation is a critical capability for humanoid robots, enabling them to interact with objects in their environment and perform complex tasks.",
+  "source": "@site/docs/week-09/manipulation-basics.md",
+  "sourceDirName": "week-09",
+  "slug": "/week-09/manipulation-basics",
+  "permalink": "/docs/week-09/manipulation-basics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 26,
+  "frontMatter": {
+    "sidebar_position": 26
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 8 Exercises",
+    "permalink": "/docs/week-08/exercises"
+  },
+  "next": {
+    "title": "Grasp Planning",
+    "permalink": "/docs/week-09/grasp-planning"
+  }
+}

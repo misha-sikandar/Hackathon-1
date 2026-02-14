@@ -1,0 +1,19 @@
+{
+  "id": "examples/README",
+  "title": "Physical AI & Humanoid Robotics - Code Examples",
+  "description": "This directory contains comprehensive code examples that demonstrate the concepts covered in the Physical AI & Humanoid Robotics course. Each example builds upon the theoretical foundations with practical implementations.",
+  "source": "@site/docs/examples/README.md",
+  "sourceDirName": "examples",
+  "slug": "/examples/",
+  "permalink": "/docs/examples/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "All Weekly Exercises",
+    "permalink": "/docs/exercises/weekly-exercises"
+  }
+}

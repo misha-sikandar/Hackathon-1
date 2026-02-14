@@ -1,0 +1,26 @@
+{
+  "id": "week-05/perception-systems",
+  "title": "Perception Systems with NVIDIA Isaac",
+  "description": "This lesson focuses on implementing perception systems using NVIDIA Isaac's GPU-accelerated capabilities. Perception is a critical component of Physical AI systems, enabling robots to understand their environment through sensors and AI algorithms.",
+  "source": "@site/docs/week-05/perception-systems.md",
+  "sourceDirName": "week-05",
+  "slug": "/week-05/perception-systems",
+  "permalink": "/docs/week-05/perception-systems",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "sidebar_position": 15
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Isaac Sim Overview",
+    "permalink": "/docs/week-05/isaac-sim-overview"
+  },
+  "next": {
+    "title": "Week 5 Exercises",
+    "permalink": "/docs/week-05/exercises"
+  }
+}

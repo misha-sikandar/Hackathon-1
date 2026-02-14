@@ -1,0 +1,26 @@
+{
+  "id": "week-06/exercises",
+  "title": "Week 6 Exercises: SLAM and Navigation",
+  "description": "This exercise sheet accompanies the Week 6 lessons on SLAM and navigation. These exercises will help you practice and reinforce your understanding of mapping, localization, and navigation in Physical AI systems.",
+  "source": "@site/docs/week-06/exercises.md",
+  "sourceDirName": "week-06",
+  "slug": "/week-06/exercises",
+  "permalink": "/docs/week-06/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 19,
+  "frontMatter": {
+    "sidebar_position": 19
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Path Planning",
+    "permalink": "/docs/week-06/path-planning"
+  },
+  "next": {
+    "title": "VLA Introduction",
+    "permalink": "/docs/week-07/vla-introduction"
+  }
+}

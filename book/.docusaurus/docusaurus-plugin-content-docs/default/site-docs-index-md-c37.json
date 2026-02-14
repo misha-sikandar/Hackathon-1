@@ -1,0 +1,17 @@
+{
+  "id": "index",
+  "title": "Home",
+  "description": "Welcome to the comprehensive course on Physical AI & Humanoid Robotics: Embodied Intelligence in the Real World. This course covers the integration of artificial intelligence with physical systems, focusing on Vision-Language-Action (VLA) systems that enable robots to understand natural language commands, perceive their environment, and execute complex physical tasks.",
+  "source": "@site/docs/index.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/docs/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Home",
+    "slug": "/"
+  }
+}

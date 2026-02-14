@@ -1,0 +1,17 @@
+{
+  "id": "week-04/index",
+  "title": "Week 4: Digital Twins with Gazebo & Unity",
+  "description": "Welcome to Week 4! This week, we'll explore the creation of digital twins using Gazebo and Unity, learning how to build simulation environments that mirror real-world physics and robot behaviors. These simulation environments are critical for safe, cost-effective development and testing of robotic systems.",
+  "source": "@site/docs/week-04/index.md",
+  "sourceDirName": "week-04",
+  "slug": "/week-04/",
+  "permalink": "/docs/week-04/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "sidebar_position": 15
+  }
+}

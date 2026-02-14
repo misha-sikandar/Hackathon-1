@@ -1,0 +1,23 @@
+{
+  "id": "week-06/slam-navigation",
+  "title": "Week 6: SLAM & Navigation for Physical AI Systems",
+  "description": "This week, we'll explore Simultaneous Localization and Mapping (SLAM) and robot navigation, which are fundamental capabilities for autonomous robots in Physical AI systems. These technologies enable robots to understand their environment and navigate effectively in unknown spaces.",
+  "source": "@site/docs/week-06/slam-navigation.md",
+  "sourceDirName": "week-06",
+  "slug": "/week-06/slam-navigation",
+  "permalink": "/docs/week-06/slam-navigation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 5 Exercises",
+    "permalink": "/docs/week-05/exercises"
+  },
+  "next": {
+    "title": "Path Planning",
+    "permalink": "/docs/week-06/path-planning"
+  }
+}

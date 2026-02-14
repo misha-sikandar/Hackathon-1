@@ -1,0 +1,14 @@
+{
+  "id": "week-02/index",
+  "title": "Week 2: ROS 2 Fundamentals for Physical AI",
+  "description": "This week, we'll establish the foundational knowledge of ROS 2 (Robot Operating System 2), which serves as the communication backbone for Physical AI systems. ROS 2 provides the infrastructure for distributed robotics applications, enabling seamless integration of perception, planning, and control components.",
+  "source": "@site/docs/week-02/index.md",
+  "sourceDirName": "week-02",
+  "slug": "/week-02/",
+  "permalink": "/docs/week-02/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

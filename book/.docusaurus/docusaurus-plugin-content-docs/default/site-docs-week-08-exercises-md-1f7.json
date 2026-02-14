@@ -1,0 +1,26 @@
+{
+  "id": "week-08/exercises",
+  "title": "Week 8 Exercises: Humanoid Locomotion and Balance Control",
+  "description": "This exercise sheet accompanies the Week 8 lessons on humanoid locomotion and balance control. These exercises will help you practice and reinforce your understanding of balance control and walking patterns in Physical AI systems.",
+  "source": "@site/docs/week-08/exercises.md",
+  "sourceDirName": "week-08",
+  "slug": "/week-08/exercises",
+  "permalink": "/docs/week-08/exercises",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 25,
+  "frontMatter": {
+    "sidebar_position": 25
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Balance Control",
+    "permalink": "/docs/week-08/balance-control"
+  },
+  "next": {
+    "title": "Manipulation Basics",
+    "permalink": "/docs/week-09/manipulation-basics"
+  }
+}

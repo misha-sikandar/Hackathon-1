@@ -1,0 +1,26 @@
+{
+  "id": "week-04/gazebo-simulation",
+  "title": "Week 4: Digital Twins with Gazebo & Unity",
+  "description": "Welcome to Week 4 of our Physical AI & Humanoid Robotics journey! This week, we'll explore simulation environments that serve as digital twins for physical robots. Simulation is a cornerstone of Physical AI development, allowing us to test algorithms safely, inexpensively, and repeatably before deploying on real hardware.",
+  "source": "@site/docs/week-04/gazebo-simulation.md",
+  "sourceDirName": "week-04",
+  "slug": "/week-04/gazebo-simulation",
+  "permalink": "/docs/week-04/gazebo-simulation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "sidebar_position": 11
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 3 Exercises",
+    "permalink": "/docs/week-03/exercises"
+  },
+  "next": {
+    "title": "Unity Integration",
+    "permalink": "/docs/week-04/unity-integration"
+  }
+}

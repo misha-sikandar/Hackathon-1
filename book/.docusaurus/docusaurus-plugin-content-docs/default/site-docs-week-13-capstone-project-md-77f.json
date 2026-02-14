@@ -1,0 +1,26 @@
+{
+  "id": "week-13/capstone-project",
+  "title": "Week 13: Capstone Project - Physical AI & Humanoid Robotics Integration",
+  "description": "Welcome to the final week of our Physical AI & Humanoid Robotics journey! This capstone project integrates all the concepts learned throughout the course into a comprehensive Physical AI system. You'll design, implement, and evaluate a complete robotic system that demonstrates the integration of perception, planning, control, and interaction capabilities.",
+  "source": "@site/docs/week-13/capstone-project.md",
+  "sourceDirName": "week-13",
+  "slug": "/week-13/capstone-project",
+  "permalink": "/docs/week-13/capstone-project",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 35,
+  "frontMatter": {
+    "sidebar_position": 35
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Week 12 Exercises",
+    "permalink": "/docs/week-12/exercises"
+  },
+  "next": {
+    "title": "Week 13 Exercises",
+    "permalink": "/docs/week-13/exercises"
+  }
+}

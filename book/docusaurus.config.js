@@ -30,6 +30,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+         sitemap: {
+        changefreq: 'weekly',
+        priority: 0.5,
+      },
       }),
     ],
   ],
@@ -51,7 +55,7 @@ const config = {
             label: 'Course',
           },
           {
-            href: 'https://github.com/PhysicalAI/physical-ai-humanoid-robotics',
+            href: 'https://github.com/misha-sikandar/Hackathon-1.git',
             label: 'GitHub',
             position: 'right',
           },

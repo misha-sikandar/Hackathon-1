@@ -7,7 +7,7 @@ const config = {
   tagline: 'Embodied Intelligence in the Real World',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-website-url.com',
+  url: 'https://hackathon-1-rust.vercel.app',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',

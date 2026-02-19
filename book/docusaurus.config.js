@@ -1,4 +1,4 @@
-// Minimal working docusaurus.config.js
+// docusaurus.config.js (GitHub Pages Version)
 // @ts-check
 
 /** @type {import('@docusaurus/types').Config} */
@@ -7,11 +7,18 @@ const config = {
   tagline: 'Embodied Intelligence in the Real World',
   favicon: 'img/favicon.ico',
 
-  url: 'https://hackathon-1-h7ph.vercel.app',
-  baseUrl: '/',
+  // ✅ GitHub Pages configuration (NO Vercel)
+  url: 'https://misha-sikandar.github.io',
+  baseUrl: '/Hackathon-1/',
+
+  organizationName: 'misha-sikandar', // GitHub username
+  projectName: 'Hackathon-1',          // Repository name
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  trailingSlash: false,
 
   i18n: {
     defaultLocale: 'en',
@@ -21,7 +28,6 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
@@ -30,42 +36,40 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-         sitemap: {
-        changefreq: 'weekly',
-        priority: 0.5,
-      },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        },
       }),
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'Physical AI & Humanoid Robotics',
-        logo: {
-          alt: 'Physical AI Logo',
-          src: 'img/logo.svg',
+  themeConfig: ({
+    navbar: {
+      title: 'Physical AI & Humanoid Robotics',
+      logo: {
+        alt: 'Physical AI Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          label: 'Course',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
-            position: 'left',
-            label: 'Course',
-          },
-          {
-            href: 'https://github.com/misha-sikandar/Hackathon-1.git',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Course`,
-      },
-    }),
+        {
+          href: 'https://github.com/misha-sikandar/Hackathon-1',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Course`,
+    },
+  }),
 };
 
 module.exports = config;

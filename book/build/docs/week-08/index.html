@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-week-08/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Week 8: Humanoid Locomotion, Manipulation, and Interaction | Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://hackathon-1-h7ph.vercel.app/docs/week-08/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Week 8: Humanoid Locomotion, Manipulation, and Interaction | Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Welcome to Week 8! This week, we&#x27;ll explore humanoid robotics, focusing on the unique challenges of human-like locomotion, manipulation, and social interaction. You&#x27;ll learn how to design and control robots that move, manipulate objects, and interact with humans in human-centered environments."><meta data-rh="true" property="og:description" content="Welcome to Week 8! This week, we&#x27;ll explore humanoid robotics, focusing on the unique challenges of human-like locomotion, manipulation, and social interaction. You&#x27;ll learn how to design and control robots that move, manipulate objects, and interact with humans in human-centered environments."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hackathon-1-h7ph.vercel.app/docs/week-08/"><link data-rh="true" rel="alternate" href="https://hackathon-1-h7ph.vercel.app/docs/week-08/" hreflang="en"><link data-rh="true" rel="alternate" href="https://hackathon-1-h7ph.vercel.app/docs/week-08/" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.4b067923.css">
+<script src="/assets/js/runtime~main.3a9eb0db.js" defer="defer"></script>
+<script src="/assets/js/main.4e16be99.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a class="navbar__item navbar__link" href="/docs/intro">Course</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/PhysicalAI/physical-ai-humanoid-robotics" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Week 8: Humanoid Locomotion, Manipulation, and Interaction</h1></header>
+<p>Welcome to Week 8! This week, we&#x27;ll explore humanoid robotics, focusing on the unique challenges of human-like locomotion, manipulation, and social interaction. You&#x27;ll learn how to design and control robots that move, manipulate objects, and interact with humans in human-centered environments.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>By the end of this week, you will be able to:</p>
+<ol>
+<li class="">Understand the principles of humanoid locomotion and balance control</li>
+<li class="">Implement manipulation systems for humanoid robots</li>
+<li class="">Design social interaction protocols for humanoid robots</li>
+<li class="">Integrate perception, planning, and control for humanoid behaviors</li>
+<li class="">Evaluate humanoid robot performance in human-centered environments</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction-to-humanoid-robotics">Introduction to Humanoid Robotics<a href="#introduction-to-humanoid-robotics" class="hash-link" aria-label="Direct link to Introduction to Humanoid Robotics" title="Direct link to Introduction to Humanoid Robotics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-are-humanoid-robots">What Are Humanoid Robots?<a href="#what-are-humanoid-robots" class="hash-link" aria-label="Direct link to What Are Humanoid Robots?" title="Direct link to What Are Humanoid Robots?" translate="no">​</a></h3>
+<p>Humanoid robots are designed to resemble the human body structure, typically featuring:</p>
+<ul>
+<li class=""><strong>Bipedal locomotion</strong>: Two legs for walking like humans</li>
+<li class=""><strong>Upper body manipulation</strong>: Arms and hands for object manipulation</li>
+<li class=""><strong>Anthropomorphic form</strong>: Human-like proportions and appearance</li>
+<li class=""><strong>Social interaction capabilities</strong>: Designed to interact naturally with humans</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-humanoid-robotics">Why Humanoid Robotics?<a href="#why-humanoid-robotics" class="hash-link" aria-label="Direct link to Why Humanoid Robotics?" title="Direct link to Why Humanoid Robotics?" translate="no">​</a></h3>
+<p>Humanoid robots offer several advantages:</p>
+<ul>
+<li class=""><strong>Environment compatibility</strong>: Designed for human environments (stairs, doorways, furniture)</li>
+<li class=""><strong>Intuitive interaction</strong>: Natural communication and cooperation with humans</li>
+<li class=""><strong>Versatility</strong>: Can perform a wide range of human-like tasks</li>
+<li class=""><strong>Social acceptance</strong>: More readily accepted by humans due to familiar form</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="challenges-in-humanoid-robotics">Challenges in Humanoid Robotics<a href="#challenges-in-humanoid-robotics" class="hash-link" aria-label="Direct link to Challenges in Humanoid Robotics" title="Direct link to Challenges in Humanoid Robotics" translate="no">​</a></h3>
+<p>Humanoid robotics presents unique challenges:</p>
+<ul>
+<li class=""><strong>Balance and stability</strong>: Maintaining balance with two legs is dynamically unstable</li>
+<li class=""><strong>Complex kinematics</strong>: Many degrees of freedom require sophisticated control</li>
+<li class=""><strong>High power requirements</strong>: Actuators must support body weight and dynamic motion</li>
+<li class=""><strong>Computational complexity</strong>: Real-time control of many joints</li>
+<li class=""><strong>Safety considerations</strong>: Operating safely around humans requires special care</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="humanoid-locomotion">Humanoid Locomotion<a href="#humanoid-locomotion" class="hash-link" aria-label="Direct link to Humanoid Locomotion" title="Direct link to Humanoid Locomotion" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bipedal-walking-fundamentals">Bipedal Walking Fundamentals<a href="#bipedal-walking-fundamentals" class="hash-link" aria-label="Direct link to Bipedal Walking Fundamentals" title="Direct link to Bipedal Walking Fundamentals" translate="no">​</a></h3>
+<p>Humanoid locomotion involves several key concepts:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="zero-moment-point-zmp">Zero Moment Point (ZMP)<a href="#zero-moment-point-zmp" class="hash-link" aria-label="Direct link to Zero Moment Point (ZMP)" title="Direct link to Zero Moment Point (ZMP)" translate="no">​</a></h4>
+<p>The ZMP is a critical concept in bipedal robotics:</p>
+<ul>
+<li class=""><strong>Definition</strong>: Point on the ground where the net moment of the ground reaction force is zero</li>
+<li class=""><strong>Importance</strong>: Determines balance and stability of the robot</li>
+<li class=""><strong>Control</strong>: Robot must keep ZMP within support polygon to maintain balance</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="center-of-mass-com-control">Center of Mass (CoM) Control<a href="#center-of-mass-com-control" class="hash-link" aria-label="Direct link to Center of Mass (CoM) Control" title="Direct link to Center of Mass (CoM) Control" translate="no">​</a></h4>
+<p>Controlling the center of mass is essential for stable locomotion:</p>
+<ul>
+<li class=""><strong>Stability</strong>: CoM must remain over the support base</li>
+<li class=""><strong>Motion</strong>: CoM trajectory affects walking pattern and stability</li>
+<li class=""><strong>Control</strong>: Feedback control adjusts CoM position in real-time</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="walking-phases">Walking Phases<a href="#walking-phases" class="hash-link" aria-label="Direct link to Walking Phases" title="Direct link to Walking Phases" translate="no">​</a></h4>
+<p>Humanoid walking consists of distinct phases:</p>
+<ul>
+<li class=""><strong>Double Support</strong>: Both feet on ground</li>
+<li class=""><strong>Single Support</strong>: One foot on ground, other swinging</li>
+<li class=""><strong>Impact Phase</strong>: Foot contacts ground</li>
+<li class=""><strong>Transition</strong>: Switching support foot</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="walking-pattern-generation">Walking Pattern Generation<a href="#walking-pattern-generation" class="hash-link" aria-label="Direct link to Walking Pattern Generation" title="Direct link to Walking Pattern Generation" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="preview-control">Preview Control<a href="#preview-control" class="hash-link" aria-label="Direct link to Preview Control" title="Direct link to Preview Control" translate="no">​</a></h4>
+<p>Preview control uses future reference trajectories to improve stability:</p>
+<ul>
+<li class=""><strong>Concept</strong>: Robot looks ahead to anticipate future steps</li>
+<li class=""><strong>Implementation</strong>: Uses preview of reference trajectory in control law</li>
+<li class=""><strong>Benefits</strong>: Improved stability and smoother motion</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="trajectory-optimization">Trajectory Optimization<a href="#trajectory-optimization" class="hash-link" aria-label="Direct link to Trajectory Optimization" title="Direct link to Trajectory Optimization" translate="no">​</a></h4>
+<p>Optimizing walking trajectories for efficiency and stability:</p>
+<ul>
+<li class=""><strong>Objectives</strong>: Minimize energy consumption, maximize stability</li>
+<li class=""><strong>Constraints</strong>: Joint limits, balance constraints, collision avoidance</li>
+<li class=""><strong>Methods</strong>: Model predictive control, optimization-based planning</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="balance-control-strategies">Balance Control Strategies<a href="#balance-control-strategies" class="hash-link" aria-label="Direct link to Balance Control Strategies" title="Direct link to Balance Control Strategies" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="passive-dynamic-walking">Passive Dynamic Walking<a href="#passive-dynamic-walking" class="hash-link" aria-label="Direct link to Passive Dynamic Walking" title="Direct link to Passive Dynamic Walking" translate="no">​</a></h4>
+<p>Using natural dynamics for efficient locomotion:</p>
+<ul>
+<li class=""><strong>Concept</strong>: Leverage gravity and momentum for walking</li>
+<li class=""><strong>Advantages</strong>: Energy efficient, natural motion</li>
+<li class=""><strong>Challenges</strong>: Limited control, requires specific design</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="active-balance-control">Active Balance Control<a href="#active-balance-control" class="hash-link" aria-label="Direct link to Active Balance Control" title="Direct link to Active Balance Control" translate="no">​</a></h4>
+<p>Using sensors and actuators for dynamic balance:</p>
+<ul>
+<li class=""><strong>Sensors</strong>: IMUs, force/torque sensors, vision systems</li>
+<li class=""><strong>Control</strong>: Real-time adjustments to maintain balance</li>
+<li class=""><strong>Robustness</strong>: Can handle disturbances and uneven terrain</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="humanoid-manipulation">Humanoid Manipulation<a href="#humanoid-manipulation" class="hash-link" aria-label="Direct link to Humanoid Manipulation" title="Direct link to Humanoid Manipulation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="anthropomorphic-manipulation">Anthropomorphic Manipulation<a href="#anthropomorphic-manipulation" class="hash-link" aria-label="Direct link to Anthropomorphic Manipulation" title="Direct link to Anthropomorphic Manipulation" translate="no">​</a></h3>
+<p>Humanoid robots are designed for human-like manipulation:</p>
+<ul>
+<li class=""><strong>Dexterous hands</strong>: Multi-fingered hands for fine manipulation</li>
+<li class=""><strong>Articulated arms</strong>: Multiple joints for reaching and positioning</li>
+<li class=""><strong>Bimanual coordination</strong>: Using both hands together</li>
+<li class=""><strong>Whole-body manipulation</strong>: Integrating arm and body motion</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="grasping-and-manipulation">Grasping and Manipulation<a href="#grasping-and-manipulation" class="hash-link" aria-label="Direct link to Grasping and Manipulation" title="Direct link to Grasping and Manipulation" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="grasp-planning">Grasp Planning<a href="#grasp-planning" class="hash-link" aria-label="Direct link to Grasp Planning" title="Direct link to Grasp Planning" translate="no">​</a></h4>
+<p>Determining how to grasp objects effectively:</p>
+<ul>
+<li class=""><strong>Grasp types</strong>: Power grasps, precision grasps, intermediate grasps</li>
+<li class=""><strong>Stability</strong>: Ensuring grasp can withstand applied forces</li>
+<li class=""><strong>Dexterity</strong>: Allowing for manipulation after grasping</li>
+<li class=""><strong>Adaptability</strong>: Adjusting to object shape and properties</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="force-control">Force Control<a href="#force-control" class="hash-link" aria-label="Direct link to Force Control" title="Direct link to Force Control" translate="no">​</a></h4>
+<p>Controlling forces during manipulation:</p>
+<ul>
+<li class=""><strong>Impedance control</strong>: Controlling robot&#x27;s mechanical impedance</li>
+<li class=""><strong>Admittance control</strong>: Controlling response to external forces</li>
+<li class=""><strong>Hybrid force-motion control</strong>: Combining force and position control</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="whole-body-manipulation">Whole-Body Manipulation<a href="#whole-body-manipulation" class="hash-link" aria-label="Direct link to Whole-Body Manipulation" title="Direct link to Whole-Body Manipulation" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="kinematic-coordination">Kinematic Coordination<a href="#kinematic-coordination" class="hash-link" aria-label="Direct link to Kinematic Coordination" title="Direct link to Kinematic Coordination" translate="no">​</a></h4>
+<p>Coordinating multiple joints for manipulation:</p>
+<ul>
+<li class=""><strong>Redundancy resolution</strong>: Using extra degrees of freedom effectively</li>
+<li class=""><strong>Task prioritization</strong>: Handling multiple simultaneous tasks</li>
+<li class=""><strong>Collision avoidance</strong>: Preventing self-collisions and environment collisions</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynamic-manipulation">Dynamic Manipulation<a href="#dynamic-manipulation" class="hash-link" aria-label="Direct link to Dynamic Manipulation" title="Direct link to Dynamic Manipulation" translate="no">​</a></h4>
+<p>Considering dynamics during manipulation:</p>
+<ul>
+<li class=""><strong>Inertia compensation</strong>: Accounting for object and robot dynamics</li>
+<li class=""><strong>Centrifugal forces</strong>: Handling forces from rapid motion</li>
+<li class=""><strong>Interaction forces</strong>: Managing forces during contact tasks</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="humanoid-interaction">Humanoid Interaction<a href="#humanoid-interaction" class="hash-link" aria-label="Direct link to Humanoid Interaction" title="Direct link to Humanoid Interaction" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="social-robotics">Social Robotics<a href="#social-robotics" class="hash-link" aria-label="Direct link to Social Robotics" title="Direct link to Social Robotics" translate="no">​</a></h3>
+<p>Humanoid robots excel at social interaction:</p>
+<ul>
+<li class=""><strong>Non-verbal communication</strong>: Gestures, posture, facial expressions</li>
+<li class=""><strong>Proxemics</strong>: Understanding personal space and social distance</li>
+<li class=""><strong>Turn-taking</strong>: Participating in natural conversations</li>
+<li class=""><strong>Emotional expression</strong>: Conveying and recognizing emotions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="human-robot-interaction-hri">Human-Robot Interaction (HRI)<a href="#human-robot-interaction-hri" class="hash-link" aria-label="Direct link to Human-Robot Interaction (HRI)" title="Direct link to Human-Robot Interaction (HRI)" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="natural-communication">Natural Communication<a href="#natural-communication" class="hash-link" aria-label="Direct link to Natural Communication" title="Direct link to Natural Communication" translate="no">​</a></h4>
+<p>Enabling intuitive human-robot interaction:</p>
+<ul>
+<li class=""><strong>Speech recognition</strong>: Understanding natural language commands</li>
+<li class=""><strong>Gesture recognition</strong>: Interpreting human gestures</li>
+<li class=""><strong>Facial expression</strong>: Reading human emotions and intentions</li>
+<li class=""><strong>Context awareness</strong>: Understanding social context</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="trust-and-acceptance">Trust and Acceptance<a href="#trust-and-acceptance" class="hash-link" aria-label="Direct link to Trust and Acceptance" title="Direct link to Trust and Acceptance" translate="no">​</a></h4>
+<p>Building trust in humanoid robots:</p>
+<ul>
+<li class=""><strong>Predictability</strong>: Consistent and understandable behavior</li>
+<li class=""><strong>Transparency</strong>: Clear indication of robot&#x27;s intentions</li>
+<li class=""><strong>Reliability</strong>: Consistent performance over time</li>
+<li class=""><strong>Safety</strong>: Safe operation around humans</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="control-architectures">Control Architectures<a href="#control-architectures" class="hash-link" aria-label="Direct link to Control Architectures" title="Direct link to Control Architectures" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hierarchical-control">Hierarchical Control<a href="#hierarchical-control" class="hash-link" aria-label="Direct link to Hierarchical Control" title="Direct link to Hierarchical Control" translate="no">​</a></h3>
+<p>Humanoid robots require multiple control levels:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Task Level]     - High-level goals and planning</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">     ↓</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Behavior Level] - Coordination of multiple behaviors</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">     ↓</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Motion Level]   - Trajectory generation and optimization</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">     ↓</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Actuator Level] - Low-level motor control</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="whole-body-control">Whole-Body Control<a href="#whole-body-control" class="hash-link" aria-label="Direct link to Whole-Body Control" title="Direct link to Whole-Body Control" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="operational-space-control">Operational Space Control<a href="#operational-space-control" class="hash-link" aria-label="Direct link to Operational Space Control" title="Direct link to Operational Space Control" translate="no">​</a></h4>
+<p>Controlling motion in task space:</p>
+<ul>
+<li class=""><strong>Concept</strong>: Control end-effectors in Cartesian space</li>
+<li class=""><strong>Advantages</strong>: Intuitive for manipulation tasks</li>
+<li class=""><strong>Integration</strong>: Combines multiple task priorities</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="task-based-prioritization">Task-Based Prioritization<a href="#task-based-prioritization" class="hash-link" aria-label="Direct link to Task-Based Prioritization" title="Direct link to Task-Based Prioritization" translate="no">​</a></h4>
+<p>Handling multiple simultaneous tasks:</p>
+<ul>
+<li class=""><strong>Primary tasks</strong>: High-priority tasks (balance, safety)</li>
+<li class=""><strong>Secondary tasks</strong>: Lower-priority tasks (manipulation, gestures)</li>
+<li class=""><strong>Conflicts resolution</strong>: Managing competing task requirements</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hardware-considerations">Hardware Considerations<a href="#hardware-considerations" class="hash-link" aria-label="Direct link to Hardware Considerations" title="Direct link to Hardware Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="actuator-requirements">Actuator Requirements<a href="#actuator-requirements" class="hash-link" aria-label="Direct link to Actuator Requirements" title="Direct link to Actuator Requirements" translate="no">​</a></h3>
+<p>Humanoid robots demand specialized actuators:</p>
+<ul>
+<li class=""><strong>High torque density</strong>: For supporting body weight and loads</li>
+<li class=""><strong>Back-drivability</strong>: For safe and compliant interaction</li>
+<li class=""><strong>Precision</strong>: Accurate position and force control</li>
+<li class=""><strong>Reliability</strong>: Long-term operation in human environments</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sensing-systems">Sensing Systems<a href="#sensing-systems" class="hash-link" aria-label="Direct link to Sensing Systems" title="Direct link to Sensing Systems" translate="no">​</a></h3>
+<p>Comprehensive sensing for humanoid robots:</p>
+<ul>
+<li class=""><strong>Proprioceptive sensors</strong>: Joint encoders, IMUs, force/torque sensors</li>
+<li class=""><strong>Exteroceptive sensors</strong>: Cameras, LiDAR, tactile sensors</li>
+<li class=""><strong>Environmental sensors</strong>: Microphones, air quality sensors</li>
+<li class=""><strong>Safety sensors</strong>: Emergency stops, collision detection</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="power-and-energy">Power and Energy<a href="#power-and-energy" class="hash-link" aria-label="Direct link to Power and Energy" title="Direct link to Power and Energy" translate="no">​</a></h3>
+<p>Managing power in humanoid systems:</p>
+<ul>
+<li class=""><strong>Battery life</strong>: Extended operation in human environments</li>
+<li class=""><strong>Efficiency</strong>: Optimizing power consumption for long-term use</li>
+<li class=""><strong>Thermal management</strong>: Heat dissipation in compact systems</li>
+<li class=""><strong>Wireless power</strong>: Opportunities for continuous charging</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety-and-compliance">Safety and Compliance<a href="#safety-and-compliance" class="hash-link" aria-label="Direct link to Safety and Compliance" title="Direct link to Safety and Compliance" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety-standards">Safety Standards<a href="#safety-standards" class="hash-link" aria-label="Direct link to Safety Standards" title="Direct link to Safety Standards" translate="no">​</a></h3>
+<p>Humanoid robots must meet safety requirements:</p>
+<ul>
+<li class=""><strong>ISO 13482</strong>: Safety requirements for personal care robots</li>
+<li class=""><strong>ISO 12100</strong>: Safety of machinery principles</li>
+<li class=""><strong>IEC 60601</strong>: Medical electrical equipment safety (for healthcare robots)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="collision-avoidance">Collision Avoidance<a href="#collision-avoidance" class="hash-link" aria-label="Direct link to Collision Avoidance" title="Direct link to Collision Avoidance" translate="no">​</a></h3>
+<p>Preventing harmful collisions:</p>
+<ul>
+<li class=""><strong>Soft computing</strong>: Using compliant materials and structures</li>
+<li class=""><strong>Active avoidance</strong>: Detecting and avoiding potential collisions</li>
+<li class=""><strong>Emergency stops</strong>: Immediate stopping when danger detected</li>
+<li class=""><strong>Safe contact</strong>: Limiting forces during unavoidable contact</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="applications-of-humanoid-robotics">Applications of Humanoid Robotics<a href="#applications-of-humanoid-robotics" class="hash-link" aria-label="Direct link to Applications of Humanoid Robotics" title="Direct link to Applications of Humanoid Robotics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="healthcare-and-assistance">Healthcare and Assistance<a href="#healthcare-and-assistance" class="hash-link" aria-label="Direct link to Healthcare and Assistance" title="Direct link to Healthcare and Assistance" translate="no">​</a></h3>
+<p>Humanoid robots in healthcare settings:</p>
+<ul>
+<li class=""><strong>Elderly care</strong>: Assistance with daily activities</li>
+<li class=""><strong>Therapy</strong>: Physical and social therapy applications</li>
+<li class=""><strong>Companionship</strong>: Social interaction for isolated individuals</li>
+<li class=""><strong>Medical assistance</strong>: Supporting medical procedures</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="education-and-research">Education and Research<a href="#education-and-research" class="hash-link" aria-label="Direct link to Education and Research" title="Direct link to Education and Research" translate="no">​</a></h3>
+<p>Humanoid robots in educational contexts:</p>
+<ul>
+<li class=""><strong>STEM education</strong>: Teaching robotics and AI concepts</li>
+<li class=""><strong>Research platforms</strong>: Testing human-robot interaction theories</li>
+<li class=""><strong>Accessibility</strong>: Assisting students with disabilities</li>
+<li class=""><strong>Language learning</strong>: Interactive language practice</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="service-industries">Service Industries<a href="#service-industries" class="hash-link" aria-label="Direct link to Service Industries" title="Direct link to Service Industries" translate="no">​</a></h3>
+<p>Commercial applications of humanoid robots:</p>
+<ul>
+<li class=""><strong>Hospitality</strong>: Customer service and concierge duties</li>
+<li class=""><strong>Retail</strong>: Customer assistance and product demonstration</li>
+<li class=""><strong>Entertainment</strong>: Interactive performances and attractions</li>
+<li class=""><strong>Security</strong>: Patrolling and monitoring applications</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="challenges-and-future-directions">Challenges and Future Directions<a href="#challenges-and-future-directions" class="hash-link" aria-label="Direct link to Challenges and Future Directions" title="Direct link to Challenges and Future Directions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-challenges">Technical Challenges<a href="#technical-challenges" class="hash-link" aria-label="Direct link to Technical Challenges" title="Direct link to Technical Challenges" translate="no">​</a></h3>
+<p>Current challenges in humanoid robotics:</p>
+<ul>
+<li class=""><strong>Energy efficiency</strong>: Reducing power consumption for practical deployment</li>
+<li class=""><strong>Robustness</strong>: Operating reliably in unstructured environments</li>
+<li class=""><strong>Cost</strong>: Making humanoid robots economically viable</li>
+<li class=""><strong>Autonomy</strong>: Increasing independence from human supervision</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ethical-considerations">Ethical Considerations<a href="#ethical-considerations" class="hash-link" aria-label="Direct link to Ethical Considerations" title="Direct link to Ethical Considerations" translate="no">​</a></h3>
+<p>Ethical issues in humanoid robotics:</p>
+<ul>
+<li class=""><strong>Privacy</strong>: Protecting personal information and privacy</li>
+<li class=""><strong>Job displacement</strong>: Impact on employment in service sectors</li>
+<li class=""><strong>Dependency</strong>: Risk of over-dependence on robot companions</li>
+<li class=""><strong>Identity</strong>: Questions about robot rights and moral status</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="looking-ahead">Looking Ahead<a href="#looking-ahead" class="hash-link" aria-label="Direct link to Looking Ahead" title="Direct link to Looking Ahead" translate="no">​</a></h2>
+<p>This week establishes the foundation for humanoid robotics. Next week, we&#x27;ll explore advanced manipulation techniques including grasping, manipulation planning, and tool use in greater detail.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercises">Exercises<a href="#exercises" class="hash-link" aria-label="Direct link to Exercises" title="Direct link to Exercises" translate="no">​</a></h2>
+<ol>
+<li class="">Implement basic humanoid walking patterns</li>
+<li class="">Create a manipulation system for a humanoid robot</li>
+<li class="">Design social interaction protocols</li>
+<li class="">Integrate perception and control systems</li>
+<li class="">Test humanoid behaviors in simulation and real environments</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading" translate="no">​</a></h2>
+<ul>
+<li class="">Humanoid Robotics: Design, Development, and Applications</li>
+<li class="">Bipedal Walking Control: Algorithms and Implementation</li>
+<li class="">Social Robotics: Interaction, Societal Impact, and Applications</li>
+<li class="">Human-Robot Interaction: Fundamentals and Human Factors</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#introduction-to-humanoid-robotics" class="table-of-contents__link toc-highlight">Introduction to Humanoid Robotics</a><ul><li><a href="#what-are-humanoid-robots" class="table-of-contents__link toc-highlight">What Are Humanoid Robots?</a></li><li><a href="#why-humanoid-robotics" class="table-of-contents__link toc-highlight">Why Humanoid Robotics?</a></li><li><a href="#challenges-in-humanoid-robotics" class="table-of-contents__link toc-highlight">Challenges in Humanoid Robotics</a></li></ul></li><li><a href="#humanoid-locomotion" class="table-of-contents__link toc-highlight">Humanoid Locomotion</a><ul><li><a href="#bipedal-walking-fundamentals" class="table-of-contents__link toc-highlight">Bipedal Walking Fundamentals</a></li><li><a href="#walking-pattern-generation" class="table-of-contents__link toc-highlight">Walking Pattern Generation</a></li><li><a href="#balance-control-strategies" class="table-of-contents__link toc-highlight">Balance Control Strategies</a></li></ul></li><li><a href="#humanoid-manipulation" class="table-of-contents__link toc-highlight">Humanoid Manipulation</a><ul><li><a href="#anthropomorphic-manipulation" class="table-of-contents__link toc-highlight">Anthropomorphic Manipulation</a></li><li><a href="#grasping-and-manipulation" class="table-of-contents__link toc-highlight">Grasping and Manipulation</a></li><li><a href="#whole-body-manipulation" class="table-of-contents__link toc-highlight">Whole-Body Manipulation</a></li></ul></li><li><a href="#humanoid-interaction" class="table-of-contents__link toc-highlight">Humanoid Interaction</a><ul><li><a href="#social-robotics" class="table-of-contents__link toc-highlight">Social Robotics</a></li><li><a href="#human-robot-interaction-hri" class="table-of-contents__link toc-highlight">Human-Robot Interaction (HRI)</a></li></ul></li><li><a href="#control-architectures" class="table-of-contents__link toc-highlight">Control Architectures</a><ul><li><a href="#hierarchical-control" class="table-of-contents__link toc-highlight">Hierarchical Control</a></li><li><a href="#whole-body-control" class="table-of-contents__link toc-highlight">Whole-Body Control</a></li></ul></li><li><a href="#hardware-considerations" class="table-of-contents__link toc-highlight">Hardware Considerations</a><ul><li><a href="#actuator-requirements" class="table-of-contents__link toc-highlight">Actuator Requirements</a></li><li><a href="#sensing-systems" class="table-of-contents__link toc-highlight">Sensing Systems</a></li><li><a href="#power-and-energy" class="table-of-contents__link toc-highlight">Power and Energy</a></li></ul></li><li><a href="#safety-and-compliance" class="table-of-contents__link toc-highlight">Safety and Compliance</a><ul><li><a href="#safety-standards" class="table-of-contents__link toc-highlight">Safety Standards</a></li><li><a href="#collision-avoidance" class="table-of-contents__link toc-highlight">Collision Avoidance</a></li></ul></li><li><a href="#applications-of-humanoid-robotics" class="table-of-contents__link toc-highlight">Applications of Humanoid Robotics</a><ul><li><a href="#healthcare-and-assistance" class="table-of-contents__link toc-highlight">Healthcare and Assistance</a></li><li><a href="#education-and-research" class="table-of-contents__link toc-highlight">Education and Research</a></li><li><a href="#service-industries" class="table-of-contents__link toc-highlight">Service Industries</a></li></ul></li><li><a href="#challenges-and-future-directions" class="table-of-contents__link toc-highlight">Challenges and Future Directions</a><ul><li><a href="#technical-challenges" class="table-of-contents__link toc-highlight">Technical Challenges</a></li><li><a href="#ethical-considerations" class="table-of-contents__link toc-highlight">Ethical Considerations</a></li></ul></li><li><a href="#looking-ahead" class="table-of-contents__link toc-highlight">Looking Ahead</a></li><li><a href="#exercises" class="table-of-contents__link toc-highlight">Exercises</a></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Physical AI & Humanoid Robotics Course</div></div></div></footer></div>
+</body>
+</html>

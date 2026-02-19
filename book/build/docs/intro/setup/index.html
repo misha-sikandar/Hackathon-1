@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-intro/setup" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Environment Setup | Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://hackathon-1-h7ph.vercel.app/docs/intro/setup"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Environment Setup | Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Before diving into Physical AI concepts, you&#x27;ll need to set up your development environment. This guide walks you through installing the necessary tools and verifying your setup."><meta data-rh="true" property="og:description" content="Before diving into Physical AI concepts, you&#x27;ll need to set up your development environment. This guide walks you through installing the necessary tools and verifying your setup."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hackathon-1-h7ph.vercel.app/docs/intro/setup"><link data-rh="true" rel="alternate" href="https://hackathon-1-h7ph.vercel.app/docs/intro/setup" hreflang="en"><link data-rh="true" rel="alternate" href="https://hackathon-1-h7ph.vercel.app/docs/intro/setup" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.4b067923.css">
+<script src="/assets/js/runtime~main.3a9eb0db.js" defer="defer"></script>
+<script src="/assets/js/main.4e16be99.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a class="navbar__item navbar__link" href="/docs/intro">Course</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/PhysicalAI/physical-ai-humanoid-robotics" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Environment Setup</h1></header>
+<p>Before diving into Physical AI concepts, you&#x27;ll need to set up your development environment. This guide walks you through installing the necessary tools and verifying your setup.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-requirements">System Requirements<a href="#system-requirements" class="hash-link" aria-label="Direct link to System Requirements" title="Direct link to System Requirements" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="minimum-specifications">Minimum Specifications<a href="#minimum-specifications" class="hash-link" aria-label="Direct link to Minimum Specifications" title="Direct link to Minimum Specifications" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Operating System</strong>: Ubuntu 22.04 LTS (recommended) or Windows 10/11 with WSL2</li>
+<li class=""><strong>CPU</strong>: 8+ cores, Intel i7 or AMD Ryzen 7 equivalent</li>
+<li class=""><strong>RAM</strong>: 16GB minimum, 32GB recommended</li>
+<li class=""><strong>GPU</strong>: NVIDIA RTX 3070 or better with CUDA support</li>
+<li class=""><strong>Storage</strong>: 50GB free space for ROS 2, Gazebo, and simulation environments</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-specifications">Recommended Specifications<a href="#recommended-specifications" class="hash-link" aria-label="Direct link to Recommended Specifications" title="Direct link to Recommended Specifications" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>CPU</strong>: 16+ cores, Intel i9 or AMD Threadripper</li>
+<li class=""><strong>RAM</strong>: 64GB</li>
+<li class=""><strong>GPU</strong>: NVIDIA RTX 4080 or better (for complex simulations)</li>
+<li class=""><strong>Storage</strong>: 100GB SSD</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installing-ros-2-humble-hawksbill">Installing ROS 2 Humble Hawksbill<a href="#installing-ros-2-humble-hawksbill" class="hash-link" aria-label="Direct link to Installing ROS 2 Humble Hawksbill" title="Direct link to Installing ROS 2 Humble Hawksbill" translate="no">​</a></h2>
+<p>ROS 2 (Robot Operating System 2) provides the middleware and tools for distributed robotics development.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="on-ubuntu-2204">On Ubuntu 22.04<a href="#on-ubuntu-2204" class="hash-link" aria-label="Direct link to On Ubuntu 22.04" title="Direct link to On Ubuntu 22.04" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Add the ROS 2 repository</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt update &amp;&amp; sudo apt install curl gnupg lsb-release</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo gpg --dearmor -o /usr/share/keyrings/ros-archive-keyring.gpg</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME) main&quot; | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Install ROS 2 packages</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt update</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt install ros-humble-desktop-full</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt install python3-colcon-common-extensions</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Source ROS 2 in your shell</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">echo &quot;source /opt/ros/humble/setup.bash&quot; &gt;&gt; ~/.bashrc</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">source ~/.bashrc</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Verify installation</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">ros2 topic list</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="on-windows-with-wsl2">On Windows with WSL2<a href="#on-windows-with-wsl2" class="hash-link" aria-label="Direct link to On Windows with WSL2" title="Direct link to On Windows with WSL2" translate="no">​</a></h3>
+<ol>
+<li class="">Install WSL2 with Ubuntu 22.04</li>
+<li class="">Follow the Ubuntu installation steps above</li>
+<li class="">Install an X-server (like VcXsrv) for GUI applications</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installing-gazebo-garden">Installing Gazebo Garden<a href="#installing-gazebo-garden" class="hash-link" aria-label="Direct link to Installing Gazebo Garden" title="Direct link to Installing Gazebo Garden" translate="no">​</a></h2>
+<p>Gazebo Garden provides physics-based simulation for testing robotics algorithms.</p>
+<ol>
+<li class="">
+<p><strong>Add the Gazebo repository</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">wget https://packages.osrfoundation.org/gazebo.gpg -O - | sudo gpg --dearmor -o /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main&quot; | sudo tee /etc/apt/sources.list.d/gazebo-stable.list &gt; /dev/null</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Install Gazebo Garden</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt update</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt install gz-garden</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Verify installation</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">gz sim</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installing-nvidia-isaac-sim-optional-but-recommended">Installing NVIDIA Isaac Sim (Optional but Recommended)<a href="#installing-nvidia-isaac-sim-optional-but-recommended" class="hash-link" aria-label="Direct link to Installing NVIDIA Isaac Sim (Optional but Recommended)" title="Direct link to Installing NVIDIA Isaac Sim (Optional but Recommended)" translate="no">​</a></h2>
+<p>NVIDIA Isaac Sim provides advanced GPU-accelerated simulation capabilities.</p>
+<ol>
+<li class="">
+<p><strong>Requirements</strong>:</p>
+<ul>
+<li class="">NVIDIA GPU with RTX capabilities</li>
+<li class="">CUDA-compatible driver (470+)</li>
+<li class="">Isaac Sim license (free for academic use)</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Installation</strong>:
+Follow the official installation guide at: <a href="https://nvidia-isaac-sim.github.io/isaac-sim/installation.html" target="_blank" rel="noopener noreferrer" class="">https://nvidia-isaac-sim.github.io/isaac-sim/installation.html</a></p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setting-up-development-tools">Setting Up Development Tools<a href="#setting-up-development-tools" class="hash-link" aria-label="Direct link to Setting Up Development Tools" title="Direct link to Setting Up Development Tools" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="python-environment">Python Environment<a href="#python-environment" class="hash-link" aria-label="Direct link to Python Environment" title="Direct link to Python Environment" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Install Python 3.10+</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt update</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt install python3.10 python3.10-dev python3.10-venv python3-pip</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Create a virtual environment</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">python3 -m venv ~/ros2_env</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">source ~/ros2_env/bin/activate</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">pip install --upgrade pip</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nodejs-for-docusaurus">Node.js for Docusaurus<a href="#nodejs-for-docusaurus" class="hash-link" aria-label="Direct link to Node.js for Docusaurus" title="Direct link to Node.js for Docusaurus" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Install Node.js 18+</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo apt-get install -y nodejs</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Verify installation</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">node --version</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">npm --version</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="verifying-your-setup">Verifying Your Setup<a href="#verifying-your-setup" class="hash-link" aria-label="Direct link to Verifying Your Setup" title="Direct link to Verifying Your Setup" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p><strong>Test ROS 2</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain"># In one terminal</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">ros2 run demo_nodes_cpp talker</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"># In another terminal</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">ros2 run demo_nodes_py listener</span><br></span></code></pre></div></div>
+<p>You should see messages passing between the nodes.</p>
+</li>
+<li class="">
+<p><strong>Test Gazebo</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">gz sim -v 4</span><br></span></code></pre></div></div>
+<p>This should launch the Gazebo GUI.</p>
+</li>
+<li class="">
+<p><strong>Test Python integration</strong>:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">python3 -c &quot;import rclpy; print(&#x27;ROS 2 Python client working&#x27;)&quot;</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-common-issues">Troubleshooting Common Issues<a href="#troubleshooting-common-issues" class="hash-link" aria-label="Direct link to Troubleshooting Common Issues" title="Direct link to Troubleshooting Common Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ros-2-not-found">ROS 2 Not Found<a href="#ros-2-not-found" class="hash-link" aria-label="Direct link to ROS 2 Not Found" title="Direct link to ROS 2 Not Found" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain"># Ensure ROS 2 is sourced</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">source /opt/ros/humble/setup.bash</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gazebo-performance-issues">Gazebo Performance Issues<a href="#gazebo-performance-issues" class="hash-link" aria-label="Direct link to Gazebo Performance Issues" title="Direct link to Gazebo Performance Issues" translate="no">​</a></h3>
+<ul>
+<li class="">Ensure your graphics drivers support OpenGL 3.3+</li>
+<li class="">Check that NVIDIA drivers are properly installed if using GPU acceleration</li>
+<li class="">Close unnecessary applications to free up GPU resources</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="permission-issues">Permission Issues<a href="#permission-issues" class="hash-link" aria-label="Direct link to Permission Issues" title="Direct link to Permission Issues" translate="no">​</a></h3>
+<ul>
+<li class="">Add yourself to the dialout group for serial communication:<!-- -->
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">sudo usermod -a -G dialout $USER</span><br></span></code></pre></div></div>
+</li>
+<li class="">Log out and back in for changes to take effect</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
+<p>Once your environment is properly set up, you can:</p>
+<ol>
+<li class="">Clone this book&#x27;s repository</li>
+<li class="">Install Docusaurus dependencies with <code>npm install</code></li>
+<li class="">Start the development server with <code>npm start</code></li>
+<li class="">Begin with Week 1: Theory Foundations</li>
+</ol>
+<p>Your development environment is now ready for the exciting journey into Physical AI and humanoid robotics!</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#system-requirements" class="table-of-contents__link toc-highlight">System Requirements</a><ul><li><a href="#minimum-specifications" class="table-of-contents__link toc-highlight">Minimum Specifications</a></li><li><a href="#recommended-specifications" class="table-of-contents__link toc-highlight">Recommended Specifications</a></li></ul></li><li><a href="#installing-ros-2-humble-hawksbill" class="table-of-contents__link toc-highlight">Installing ROS 2 Humble Hawksbill</a><ul><li><a href="#on-ubuntu-2204" class="table-of-contents__link toc-highlight">On Ubuntu 22.04</a></li><li><a href="#on-windows-with-wsl2" class="table-of-contents__link toc-highlight">On Windows with WSL2</a></li></ul></li><li><a href="#installing-gazebo-garden" class="table-of-contents__link toc-highlight">Installing Gazebo Garden</a></li><li><a href="#installing-nvidia-isaac-sim-optional-but-recommended" class="table-of-contents__link toc-highlight">Installing NVIDIA Isaac Sim (Optional but Recommended)</a></li><li><a href="#setting-up-development-tools" class="table-of-contents__link toc-highlight">Setting Up Development Tools</a><ul><li><a href="#python-environment" class="table-of-contents__link toc-highlight">Python Environment</a></li><li><a href="#nodejs-for-docusaurus" class="table-of-contents__link toc-highlight">Node.js for Docusaurus</a></li></ul></li><li><a href="#verifying-your-setup" class="table-of-contents__link toc-highlight">Verifying Your Setup</a></li><li><a href="#troubleshooting-common-issues" class="table-of-contents__link toc-highlight">Troubleshooting Common Issues</a><ul><li><a href="#ros-2-not-found" class="table-of-contents__link toc-highlight">ROS 2 Not Found</a></li><li><a href="#gazebo-performance-issues" class="table-of-contents__link toc-highlight">Gazebo Performance Issues</a></li><li><a href="#permission-issues" class="table-of-contents__link toc-highlight">Permission Issues</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Physical AI & Humanoid Robotics Course</div></div></div></footer></div>
+</body>
+</html>

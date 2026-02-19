@@ -7,7 +7,7 @@ export default {
   "title": "Physical AI & Humanoid Robotics",
   "tagline": "Embodied Intelligence in the Real World",
   "favicon": "img/favicon.ico",
-  "url": "https://your-website-url.com",
+  "url": "https://hackathon-1-h7ph.vercel.app",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "i18n": {
@@ -28,6 +28,10 @@ export default {
         "blog": false,
         "theme": {
           "customCss": "F:\\Hackathon 1\\book\\src\\css\\custom.css"
+        },
+        "sitemap": {
+          "changefreq": "weekly",
+          "priority": 0.5
         }
       }
     ]

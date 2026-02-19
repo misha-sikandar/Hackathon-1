@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-week-07/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Week 7: Vision-Language-Action Robotics | Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://hackathon-1-h7ph.vercel.app/docs/week-07/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Week 7: Vision-Language-Action Robotics | Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Welcome to Week 7! This week, we&#x27;ll explore Vision-Language-Action (VLA) robotics, which combines perception, reasoning, and action in embodied AI systems. You&#x27;ll learn how to create robots that can understand natural language commands, perceive their environment visually, and execute appropriate actions."><meta data-rh="true" property="og:description" content="Welcome to Week 7! This week, we&#x27;ll explore Vision-Language-Action (VLA) robotics, which combines perception, reasoning, and action in embodied AI systems. You&#x27;ll learn how to create robots that can understand natural language commands, perceive their environment visually, and execute appropriate actions."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hackathon-1-h7ph.vercel.app/docs/week-07/"><link data-rh="true" rel="alternate" href="https://hackathon-1-h7ph.vercel.app/docs/week-07/" hreflang="en"><link data-rh="true" rel="alternate" href="https://hackathon-1-h7ph.vercel.app/docs/week-07/" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.4b067923.css">
+<script src="/assets/js/runtime~main.3a9eb0db.js" defer="defer"></script>
+<script src="/assets/js/main.4e16be99.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a class="navbar__item navbar__link" href="/docs/intro">Course</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/PhysicalAI/physical-ai-humanoid-robotics" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Week 7: Vision-Language-Action Robotics</h1></header>
+<p>Welcome to Week 7! This week, we&#x27;ll explore Vision-Language-Action (VLA) robotics, which combines perception, reasoning, and action in embodied AI systems. You&#x27;ll learn how to create robots that can understand natural language commands, perceive their environment visually, and execute appropriate actions.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>By the end of this week, you will be able to:</p>
+<ol>
+<li class="">Understand the fundamentals of Vision-Language-Action systems</li>
+<li class="">Implement multimodal perception combining vision and language</li>
+<li class="">Design action selection mechanisms for VLA systems</li>
+<li class="">Integrate VLA capabilities with robotic control systems</li>
+<li class="">Evaluate and validate VLA system performance</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction-to-vision-language-action-systems">Introduction to Vision-Language-Action Systems<a href="#introduction-to-vision-language-action-systems" class="hash-link" aria-label="Direct link to Introduction to Vision-Language-Action Systems" title="Direct link to Introduction to Vision-Language-Action Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-are-vla-systems">What are VLA Systems?<a href="#what-are-vla-systems" class="hash-link" aria-label="Direct link to What are VLA Systems?" title="Direct link to What are VLA Systems?" translate="no">​</a></h3>
+<p>Vision-Language-Action (VLA) systems represent a paradigm in robotics where perception (vision), cognition (language), and action (manipulation/navigation) are tightly integrated. These systems enable robots to:</p>
+<ul>
+<li class=""><strong>Understand natural language commands</strong>: Interpret human instructions</li>
+<li class=""><strong>Perceive the environment visually</strong>: Identify objects, locations, and states</li>
+<li class=""><strong>Execute appropriate actions</strong>: Manipulate objects or navigate to locations</li>
+<li class=""><strong>Learn from interaction</strong>: Improve through experience and feedback</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-vla-framework">The VLA Framework<a href="#the-vla-framework" class="hash-link" aria-label="Direct link to The VLA Framework" title="Direct link to The VLA Framework" translate="no">​</a></h3>
+<p>The VLA framework consists of three interconnected components:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Visual Perception] ←→ [Language Understanding] ←→ [Action Selection]</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">       ↓                        ↓                        ↓</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Object Detection]    [Intent Recognition]    [Manipulation/Navigation]</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Scene Understanding] [Command Parsing]       [Task Execution]</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">[Spatial Reasoning]   [Context Awareness]     [Feedback Processing]</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-vla-matters-for-physical-ai">Why VLA Matters for Physical AI<a href="#why-vla-matters-for-physical-ai" class="hash-link" aria-label="Direct link to Why VLA Matters for Physical AI" title="Direct link to Why VLA Matters for Physical AI" translate="no">​</a></h3>
+<p>VLA systems are crucial for Physical AI because they:</p>
+<ul>
+<li class=""><strong>Enable natural human-robot interaction</strong>: Humans can communicate with robots using natural language</li>
+<li class=""><strong>Provide contextual understanding</strong>: Robots can understand complex, context-dependent commands</li>
+<li class=""><strong>Enable generalization</strong>: Robots can apply learned concepts to new situations</li>
+<li class=""><strong>Facilitate learning</strong>: Robots can learn new tasks through instruction and demonstration</li>
+<li class=""><strong>Bridge symbolic and sub-symbolic AI</strong>: Connect high-level reasoning with low-level control</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="vision-components-in-vla-systems">Vision Components in VLA Systems<a href="#vision-components-in-vla-systems" class="hash-link" aria-label="Direct link to Vision Components in VLA Systems" title="Direct link to Vision Components in VLA Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="object-detection-and-recognition">Object Detection and Recognition<a href="#object-detection-and-recognition" class="hash-link" aria-label="Direct link to Object Detection and Recognition" title="Direct link to Object Detection and Recognition" translate="no">​</a></h3>
+<p>VLA systems must identify and locate objects in the environment:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-object-detection">Visual Object Detection<a href="#visual-object-detection" class="hash-link" aria-label="Direct link to Visual Object Detection" title="Direct link to Visual Object Detection" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>YOLO-based detectors</strong>: Real-time object detection for robotics</li>
+<li class=""><strong>Mask R-CNN</strong>: Instance segmentation for precise object boundaries</li>
+<li class=""><strong>CLIP-based detection</strong>: Zero-shot detection using language models</li>
+<li class=""><strong>Foundation models</strong>: Leveraging pre-trained vision models</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3d-object-understanding">3D Object Understanding<a href="#3d-object-understanding" class="hash-link" aria-label="Direct link to 3D Object Understanding" title="Direct link to 3D Object Understanding" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Point cloud processing</strong>: Understanding 3D object shapes</li>
+<li class=""><strong>Pose estimation</strong>: Determining object position and orientation</li>
+<li class=""><strong>Shape completion</strong>: Inferring complete object geometry from partial views</li>
+<li class=""><strong>Part-based understanding</strong>: Recognizing object parts and relationships</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scene-understanding">Scene Understanding<a href="#scene-understanding" class="hash-link" aria-label="Direct link to Scene Understanding" title="Direct link to Scene Understanding" translate="no">​</a></h3>
+<p>VLA systems need to understand the broader scene context:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="spatial-relationships">Spatial Relationships<a href="#spatial-relationships" class="hash-link" aria-label="Direct link to Spatial Relationships" title="Direct link to Spatial Relationships" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Object relationships</strong>: &quot;The cup is on the table&quot;</li>
+<li class=""><strong>Spatial prepositions</strong>: Understanding &quot;above&quot;, &quot;below&quot;, &quot;next to&quot;</li>
+<li class=""><strong>Room layout</strong>: Understanding indoor spatial configurations</li>
+<li class=""><strong>Navigation landmarks</strong>: Identifying salient locations for navigation</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="semantic-scene-understanding">Semantic Scene Understanding<a href="#semantic-scene-understanding" class="hash-link" aria-label="Direct link to Semantic Scene Understanding" title="Direct link to Semantic Scene Understanding" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Activity recognition</strong>: Understanding ongoing activities</li>
+<li class=""><strong>Scene categorization</strong>: Identifying scene types (kitchen, office, etc.)</li>
+<li class=""><strong>Functional understanding</strong>: Understanding object functions and affordances</li>
+<li class=""><strong>Temporal dynamics</strong>: Understanding how scenes change over time</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="language-components-in-vla-systems">Language Components in VLA Systems<a href="#language-components-in-vla-systems" class="hash-link" aria-label="Direct link to Language Components in VLA Systems" title="Direct link to Language Components in VLA Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="natural-language-understanding">Natural Language Understanding<a href="#natural-language-understanding" class="hash-link" aria-label="Direct link to Natural Language Understanding" title="Direct link to Natural Language Understanding" translate="no">​</a></h3>
+<p>VLA systems must interpret human language commands:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="command-parsing">Command Parsing<a href="#command-parsing" class="hash-link" aria-label="Direct link to Command Parsing" title="Direct link to Command Parsing" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Syntactic analysis</strong>: Understanding sentence structure</li>
+<li class=""><strong>Semantic parsing</strong>: Extracting meaning from sentences</li>
+<li class=""><strong>Named entity recognition</strong>: Identifying objects, locations, actions</li>
+<li class=""><strong>Dependency parsing</strong>: Understanding grammatical relationships</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="intent-recognition">Intent Recognition<a href="#intent-recognition" class="hash-link" aria-label="Direct link to Intent Recognition" title="Direct link to Intent Recognition" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Action classification</strong>: Determining the intended action</li>
+<li class=""><strong>Object identification</strong>: Identifying target objects</li>
+<li class=""><strong>Constraint extraction</strong>: Understanding spatial/temporal constraints</li>
+<li class=""><strong>Context resolution</strong>: Resolving ambiguous references</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="language-generation">Language Generation<a href="#language-generation" class="hash-link" aria-label="Direct link to Language Generation" title="Direct link to Language Generation" translate="no">​</a></h3>
+<p>VLA systems may also need to communicate back to humans:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="natural-language-generation">Natural Language Generation<a href="#natural-language-generation" class="hash-link" aria-label="Direct link to Natural Language Generation" title="Direct link to Natural Language Generation" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Status reporting</strong>: &quot;I picked up the red cup&quot;</li>
+<li class=""><strong>Query responses</strong>: Answering questions about the environment</li>
+<li class=""><strong>Explanations</strong>: Explaining robot actions and decisions</li>
+<li class=""><strong>Clarification requests</strong>: Asking for clarification when uncertain</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="action-components-in-vla-systems">Action Components in VLA Systems<a href="#action-components-in-vla-systems" class="hash-link" aria-label="Direct link to Action Components in VLA Systems" title="Direct link to Action Components in VLA Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="manipulation-actions">Manipulation Actions<a href="#manipulation-actions" class="hash-link" aria-label="Direct link to Manipulation Actions" title="Direct link to Manipulation Actions" translate="no">​</a></h3>
+<p>VLA systems must execute manipulation tasks based on language commands:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="grasp-planning">Grasp Planning<a href="#grasp-planning" class="hash-link" aria-label="Direct link to Grasp Planning" title="Direct link to Grasp Planning" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Object-specific grasps</strong>: Planning appropriate grasps for different objects</li>
+<li class=""><strong>Context-aware grasping</strong>: Considering the task and environment</li>
+<li class=""><strong>Adaptive grasping</strong>: Adjusting based on object properties</li>
+<li class=""><strong>Multi-finger coordination</strong>: Coordinating multiple fingers for complex grasps</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="task-oriented-manipulation">Task-Oriented Manipulation<a href="#task-oriented-manipulation" class="hash-link" aria-label="Direct link to Task-Oriented Manipulation" title="Direct link to Task-Oriented Manipulation" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Sequential manipulation</strong>: Executing multi-step manipulation tasks</li>
+<li class=""><strong>Tool use</strong>: Using objects as tools to achieve goals</li>
+<li class=""><strong>Assembly operations</strong>: Combining objects in specific ways</li>
+<li class=""><strong>Deformable object manipulation</strong>: Handling non-rigid objects</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="navigation-actions">Navigation Actions<a href="#navigation-actions" class="hash-link" aria-label="Direct link to Navigation Actions" title="Direct link to Navigation Actions" translate="no">​</a></h3>
+<p>VLA systems must also navigate based on language commands:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="spatial-navigation">Spatial Navigation<a href="#spatial-navigation" class="hash-link" aria-label="Direct link to Spatial Navigation" title="Direct link to Spatial Navigation" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Goal-directed navigation</strong>: Moving to specified locations</li>
+<li class=""><strong>Route following</strong>: Following complex paths with multiple waypoints</li>
+<li class=""><strong>Dynamic obstacle avoidance</strong>: Navigating around moving obstacles</li>
+<li class=""><strong>Social navigation</strong>: Navigating while respecting social norms</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="instruction-following">Instruction Following<a href="#instruction-following" class="hash-link" aria-label="Direct link to Instruction Following" title="Direct link to Instruction Following" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Wayfinding</strong>: Following directions like &quot;go to the kitchen&quot;</li>
+<li class=""><strong>Landmark-based navigation</strong>: Using visual landmarks for navigation</li>
+<li class=""><strong>Relative navigation</strong>: Understanding relative directions</li>
+<li class=""><strong>Multi-floor navigation</strong>: Navigating across different floors</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="multimodal-fusion">Multimodal Fusion<a href="#multimodal-fusion" class="hash-link" aria-label="Direct link to Multimodal Fusion" title="Direct link to Multimodal Fusion" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="early-vs-late-fusion">Early vs. Late Fusion<a href="#early-vs-late-fusion" class="hash-link" aria-label="Direct link to Early vs. Late Fusion" title="Direct link to Early vs. Late Fusion" translate="no">​</a></h3>
+<p>VLA systems can integrate vision and language information at different levels:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="early-fusion">Early Fusion<a href="#early-fusion" class="hash-link" aria-label="Direct link to Early Fusion" title="Direct link to Early Fusion" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Joint embeddings</strong>: Learning joint vision-language representations</li>
+<li class=""><strong>Attention mechanisms</strong>: Attending to relevant visual regions based on language</li>
+<li class=""><strong>Cross-modal transformers</strong>: Processing vision and language together</li>
+<li class=""><strong>Multimodal encoders</strong>: Encoding both modalities simultaneously</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="late-fusion">Late Fusion<a href="#late-fusion" class="hash-link" aria-label="Direct link to Late Fusion" title="Direct link to Late Fusion" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Separate processing</strong>: Processing vision and language independently</li>
+<li class=""><strong>Late integration</strong>: Combining outputs at decision level</li>
+<li class=""><strong>Ensemble methods</strong>: Combining multiple specialized models</li>
+<li class=""><strong>Modular architectures</strong>: Maintaining modality-specific components</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="attention-mechanisms">Attention Mechanisms<a href="#attention-mechanisms" class="hash-link" aria-label="Direct link to Attention Mechanisms" title="Direct link to Attention Mechanisms" translate="no">​</a></h3>
+<p>Attention mechanisms help VLA systems focus on relevant information:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-attention">Visual Attention<a href="#visual-attention" class="hash-link" aria-label="Direct link to Visual Attention" title="Direct link to Visual Attention" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Spatial attention</strong>: Focusing on specific image regions</li>
+<li class=""><strong>Object attention</strong>: Attending to specific objects</li>
+<li class=""><strong>Saliency detection</strong>: Identifying visually salient regions</li>
+<li class=""><strong>Dynamic attention</strong>: Adjusting attention over time</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="language-attention">Language Attention<a href="#language-attention" class="hash-link" aria-label="Direct link to Language Attention" title="Direct link to Language Attention" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Token attention</strong>: Focusing on relevant words in commands</li>
+<li class=""><strong>Syntax-guided attention</strong>: Following grammatical structure</li>
+<li class=""><strong>Semantic attention</strong>: Attending to meaningful concepts</li>
+<li class=""><strong>Context attention</strong>: Maintaining relevant contextual information</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="foundation-models-in-vla">Foundation Models in VLA<a href="#foundation-models-in-vla" class="hash-link" aria-label="Direct link to Foundation Models in VLA" title="Direct link to Foundation Models in VLA" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="large-vision-language-models">Large Vision-Language Models<a href="#large-vision-language-models" class="hash-link" aria-label="Direct link to Large Vision-Language Models" title="Direct link to Large Vision-Language Models" translate="no">​</a></h3>
+<p>Recent advances in foundation models have revolutionized VLA systems:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="clip-contrastive-language-image-pre-training">CLIP (Contrastive Language-Image Pre-training)<a href="#clip-contrastive-language-image-pre-training" class="hash-link" aria-label="Direct link to CLIP (Contrastive Language-Image Pre-training)" title="Direct link to CLIP (Contrastive Language-Image Pre-training)" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Zero-shot recognition</strong>: Recognizing objects without training</li>
+<li class=""><strong>Text-to-image retrieval</strong>: Finding images based on text descriptions</li>
+<li class=""><strong>Image-to-text retrieval</strong>: Describing images with text</li>
+<li class=""><strong>Transfer learning</strong>: Adapting to new tasks with minimal data</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="blip-bootstrapping-language-image-pre-training">BLIP (Bootstrapping Language-Image Pre-training)<a href="#blip-bootstrapping-language-image-pre-training" class="hash-link" aria-label="Direct link to BLIP (Bootstrapping Language-Image Pre-training)" title="Direct link to BLIP (Bootstrapping Language-Image Pre-training)" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Image captioning</strong>: Generating natural language descriptions</li>
+<li class=""><strong>Visual question answering</strong>: Answering questions about images</li>
+<li class=""><strong>Multimodal understanding</strong>: Joint understanding of vision and language</li>
+<li class=""><strong>Synthetic data generation</strong>: Creating training data from models</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="large-action-models">Large Action Models<a href="#large-action-models" class="hash-link" aria-label="Direct link to Large Action Models" title="Direct link to Large Action Models" translate="no">​</a></h3>
+<p>Foundation models for action and manipulation:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="decision-transformers">Decision Transformers<a href="#decision-transformers" class="hash-link" aria-label="Direct link to Decision Transformers" title="Direct link to Decision Transformers" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Sequence modeling</strong>: Modeling action sequences as language</li>
+<li class=""><strong>Offline RL</strong>: Learning from pre-collected datasets</li>
+<li class=""><strong>Long-horizon planning</strong>: Planning long sequences of actions</li>
+<li class=""><strong>Generalization</strong>: Applying learned policies to new tasks</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="diffusion-models-for-action">Diffusion Models for Action<a href="#diffusion-models-for-action" class="hash-link" aria-label="Direct link to Diffusion Models for Action" title="Direct link to Diffusion Models for Action" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Action generation</strong>: Generating action sequences as diffusion</li>
+<li class=""><strong>Trajectory optimization</strong>: Optimizing action trajectories</li>
+<li class=""><strong>Multi-modal conditioning</strong>: Conditioning on vision and language</li>
+<li class=""><strong>Uncertainty quantification</strong>: Modeling action uncertainty</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-architecture">Implementation Architecture<a href="#implementation-architecture" class="hash-link" aria-label="Direct link to Implementation Architecture" title="Direct link to Implementation Architecture" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vla-system-components">VLA System Components<a href="#vla-system-components" class="hash-link" aria-label="Direct link to VLA System Components" title="Direct link to VLA System Components" translate="no">​</a></h3>
+<p>A typical VLA system consists of several key components:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│   Vision        │    │  Language        │    │   Action        │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│   Component     │    │  Component       │    │   Component     │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│                 │    │                  │    │                 │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│ • Object Det.   │    │ • Command Parse  │    │ • Motion Plan   │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│ • Scene Und.    │←──→│ • Intent Recog.  │←──→│ • Control       │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│ • Spatial Rel.  │    │ • Context Model  │    │ • Execution     │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│ • Feature Extr. │    │ • NL Generation  │    │ • Feedback      │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">└─────────────────┘    └──────────────────┘    └─────────────────┘</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">         │                        │                        │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">         └────────────────────────┼────────────────────────┘</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                                  │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    ┌─────────────────────────┐</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    │   Fusion &amp; Reasoning    │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    │   Component             │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    │                         │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    │ • Multimodal Fusion     │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    │ • Spatial Reasoning     │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    │ • Task Planning         │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    │ • Decision Making       │</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">                    └─────────────────────────┘</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="processing-pipeline">Processing Pipeline<a href="#processing-pipeline" class="hash-link" aria-label="Direct link to Processing Pipeline" title="Direct link to Processing Pipeline" translate="no">​</a></h3>
+<p>The typical VLA processing pipeline:</p>
+<ol>
+<li class=""><strong>Input Processing</strong>: Receive language command and visual input</li>
+<li class=""><strong>Feature Extraction</strong>: Extract vision and language features</li>
+<li class=""><strong>Multimodal Fusion</strong>: Combine vision and language information</li>
+<li class=""><strong>Reasoning</strong>: Plan actions based on fused information</li>
+<li class=""><strong>Action Generation</strong>: Generate specific robot actions</li>
+<li class=""><strong>Execution</strong>: Execute actions on the robot</li>
+<li class=""><strong>Feedback</strong>: Monitor execution and provide feedback</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="challenges-in-vla-systems">Challenges in VLA Systems<a href="#challenges-in-vla-systems" class="hash-link" aria-label="Direct link to Challenges in VLA Systems" title="Direct link to Challenges in VLA Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="grounding-challenges">Grounding Challenges<a href="#grounding-challenges" class="hash-link" aria-label="Direct link to Grounding Challenges" title="Direct link to Grounding Challenges" translate="no">​</a></h3>
+<p>Connecting language to visual reality:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="symbol-grounding">Symbol Grounding<a href="#symbol-grounding" class="hash-link" aria-label="Direct link to Symbol Grounding" title="Direct link to Symbol Grounding" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Word-meaning connections</strong>: Linking words to visual concepts</li>
+<li class=""><strong>Referent identification</strong>: Identifying what words refer to</li>
+<li class=""><strong>Context-dependent meaning</strong>: Understanding meaning based on context</li>
+<li class=""><strong>Novel concept learning</strong>: Learning new concepts through grounding</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="spatial-grounding">Spatial Grounding<a href="#spatial-grounding" class="hash-link" aria-label="Direct link to Spatial Grounding" title="Direct link to Spatial Grounding" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Location grounding</strong>: Connecting spatial language to real locations</li>
+<li class=""><strong>Size and scale</strong>: Understanding relative sizes and distances</li>
+<li class=""><strong>Orientation and pose</strong>: Grounding spatial relations in 3D</li>
+<li class=""><strong>Dynamic spatial relationships</strong>: Understanding changing spatial relations</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="reasoning-challenges">Reasoning Challenges<a href="#reasoning-challenges" class="hash-link" aria-label="Direct link to Reasoning Challenges" title="Direct link to Reasoning Challenges" translate="no">​</a></h3>
+<p>Complex reasoning required for VLA systems:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="commonsense-reasoning">Commonsense Reasoning<a href="#commonsense-reasoning" class="hash-link" aria-label="Direct link to Commonsense Reasoning" title="Direct link to Commonsense Reasoning" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Physical reasoning</strong>: Understanding physics and object properties</li>
+<li class=""><strong>Social reasoning</strong>: Understanding social norms and expectations</li>
+<li class=""><strong>Functional reasoning</strong>: Understanding object functions and affordances</li>
+<li class=""><strong>Causal reasoning</strong>: Understanding cause and effect relationships</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="planning-and-inference">Planning and Inference<a href="#planning-and-inference" class="hash-link" aria-label="Direct link to Planning and Inference" title="Direct link to Planning and Inference" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Long-horizon planning</strong>: Planning sequences of actions</li>
+<li class=""><strong>Partial observability</strong>: Reasoning with incomplete information</li>
+<li class=""><strong>Uncertainty handling</strong>: Managing uncertainty in perception and action</li>
+<li class=""><strong>Multi-step inference</strong>: Performing complex logical inference</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-challenges">Learning Challenges<a href="#learning-challenges" class="hash-link" aria-label="Direct link to Learning Challenges" title="Direct link to Learning Challenges" translate="no">​</a></h3>
+<p>How VLA systems acquire new capabilities:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="few-shot-learning">Few-Shot Learning<a href="#few-shot-learning" class="hash-link" aria-label="Direct link to Few-Shot Learning" title="Direct link to Few-Shot Learning" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Rapid adaptation</strong>: Learning new tasks from few examples</li>
+<li class=""><strong>Transfer learning</strong>: Applying knowledge to new situations</li>
+<li class=""><strong>Meta-learning</strong>: Learning to learn new tasks efficiently</li>
+<li class=""><strong>Generalization</strong>: Applying learned concepts broadly</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="interactive-learning">Interactive Learning<a href="#interactive-learning" class="hash-link" aria-label="Direct link to Interactive Learning" title="Direct link to Interactive Learning" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Learning from demonstration</strong>: Learning by watching humans</li>
+<li class=""><strong>Learning from instruction</strong>: Learning from language explanations</li>
+<li class=""><strong>Learning from feedback</strong>: Improving based on corrections</li>
+<li class=""><strong>Active learning</strong>: Seeking information to improve performance</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="evaluation-and-benchmarks">Evaluation and Benchmarks<a href="#evaluation-and-benchmarks" class="hash-link" aria-label="Direct link to Evaluation and Benchmarks" title="Direct link to Evaluation and Benchmarks" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vla-evaluation-metrics">VLA Evaluation Metrics<a href="#vla-evaluation-metrics" class="hash-link" aria-label="Direct link to VLA Evaluation Metrics" title="Direct link to VLA Evaluation Metrics" translate="no">​</a></h3>
+<p>Evaluating VLA system performance:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="task-success-metrics">Task Success Metrics<a href="#task-success-metrics" class="hash-link" aria-label="Direct link to Task Success Metrics" title="Direct link to Task Success Metrics" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Execution success rate</strong>: Percentage of tasks completed successfully</li>
+<li class=""><strong>Efficiency</strong>: Time and resources required for task completion</li>
+<li class=""><strong>Safety</strong>: Frequency of unsafe actions or collisions</li>
+<li class=""><strong>Robustness</strong>: Performance under varying conditions</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="language-understanding-metrics">Language Understanding Metrics<a href="#language-understanding-metrics" class="hash-link" aria-label="Direct link to Language Understanding Metrics" title="Direct link to Language Understanding Metrics" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Command comprehension</strong>: Accuracy of command interpretation</li>
+<li class=""><strong>Ambiguity resolution</strong>: Success in resolving ambiguous commands</li>
+<li class=""><strong>Context awareness</strong>: Proper use of contextual information</li>
+<li class=""><strong>Error recovery</strong>: Ability to recover from misinterpretations</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="benchmark-datasets">Benchmark Datasets<a href="#benchmark-datasets" class="hash-link" aria-label="Direct link to Benchmark Datasets" title="Direct link to Benchmark Datasets" translate="no">​</a></h3>
+<p>Standard datasets for evaluating VLA systems:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="vision-language-datasets">Vision-Language Datasets<a href="#vision-language-datasets" class="hash-link" aria-label="Direct link to Vision-Language Datasets" title="Direct link to Vision-Language Datasets" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>COCO Captions</strong>: Image-text pairs for evaluation</li>
+<li class=""><strong>Visual Genome</strong>: Scene graphs with language descriptions</li>
+<li class=""><strong>Conceptual Captions</strong>: Large-scale image-text pairs</li>
+<li class=""><strong>RefCOCO</strong>: Referring expression comprehension</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="action-datasets">Action Datasets<a href="#action-datasets" class="hash-link" aria-label="Direct link to Action Datasets" title="Direct link to Action Datasets" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>THOR</strong>: Interactive household environments</li>
+<li class=""><strong>Matterport3D</strong>: 3D indoor environments for navigation</li>
+<li class=""><strong>RoboTurk</strong>: Robot manipulation demonstrations</li>
+<li class=""><strong>Cross-Task</strong>: Multi-task robot learning</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="looking-ahead">Looking Ahead<a href="#looking-ahead" class="hash-link" aria-label="Direct link to Looking Ahead" title="Direct link to Looking Ahead" translate="no">​</a></h2>
+<p>This week establishes the foundation for multimodal AI systems in robotics. Next week, we&#x27;ll explore humanoid robotics, focusing on locomotion, balance, and human-like movement patterns.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercises">Exercises<a href="#exercises" class="hash-link" aria-label="Direct link to Exercises" title="Direct link to Exercises" translate="no">​</a></h2>
+<ol>
+<li class="">Implement a simple VLA system for object manipulation</li>
+<li class="">Create a multimodal perception pipeline</li>
+<li class="">Design action selection mechanisms</li>
+<li class="">Integrate language understanding with robot control</li>
+<li class="">Test VLA system in simulated and real environments</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading" translate="no">​</a></h2>
+<ul>
+<li class="">Vision-Language Models in Robotics: Recent advances and applications</li>
+<li class="">Multimodal Learning: Techniques for combining different sensory modalities</li>
+<li class="">Embodied AI: Physical AI systems that interact with the real world</li>
+<li class="">Human-Robot Interaction: Natural interaction between humans and robots</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#introduction-to-vision-language-action-systems" class="table-of-contents__link toc-highlight">Introduction to Vision-Language-Action Systems</a><ul><li><a href="#what-are-vla-systems" class="table-of-contents__link toc-highlight">What are VLA Systems?</a></li><li><a href="#the-vla-framework" class="table-of-contents__link toc-highlight">The VLA Framework</a></li><li><a href="#why-vla-matters-for-physical-ai" class="table-of-contents__link toc-highlight">Why VLA Matters for Physical AI</a></li></ul></li><li><a href="#vision-components-in-vla-systems" class="table-of-contents__link toc-highlight">Vision Components in VLA Systems</a><ul><li><a href="#object-detection-and-recognition" class="table-of-contents__link toc-highlight">Object Detection and Recognition</a></li><li><a href="#scene-understanding" class="table-of-contents__link toc-highlight">Scene Understanding</a></li></ul></li><li><a href="#language-components-in-vla-systems" class="table-of-contents__link toc-highlight">Language Components in VLA Systems</a><ul><li><a href="#natural-language-understanding" class="table-of-contents__link toc-highlight">Natural Language Understanding</a></li><li><a href="#language-generation" class="table-of-contents__link toc-highlight">Language Generation</a></li></ul></li><li><a href="#action-components-in-vla-systems" class="table-of-contents__link toc-highlight">Action Components in VLA Systems</a><ul><li><a href="#manipulation-actions" class="table-of-contents__link toc-highlight">Manipulation Actions</a></li><li><a href="#navigation-actions" class="table-of-contents__link toc-highlight">Navigation Actions</a></li></ul></li><li><a href="#multimodal-fusion" class="table-of-contents__link toc-highlight">Multimodal Fusion</a><ul><li><a href="#early-vs-late-fusion" class="table-of-contents__link toc-highlight">Early vs. Late Fusion</a></li><li><a href="#attention-mechanisms" class="table-of-contents__link toc-highlight">Attention Mechanisms</a></li></ul></li><li><a href="#foundation-models-in-vla" class="table-of-contents__link toc-highlight">Foundation Models in VLA</a><ul><li><a href="#large-vision-language-models" class="table-of-contents__link toc-highlight">Large Vision-Language Models</a></li><li><a href="#large-action-models" class="table-of-contents__link toc-highlight">Large Action Models</a></li></ul></li><li><a href="#implementation-architecture" class="table-of-contents__link toc-highlight">Implementation Architecture</a><ul><li><a href="#vla-system-components" class="table-of-contents__link toc-highlight">VLA System Components</a></li><li><a href="#processing-pipeline" class="table-of-contents__link toc-highlight">Processing Pipeline</a></li></ul></li><li><a href="#challenges-in-vla-systems" class="table-of-contents__link toc-highlight">Challenges in VLA Systems</a><ul><li><a href="#grounding-challenges" class="table-of-contents__link toc-highlight">Grounding Challenges</a></li><li><a href="#reasoning-challenges" class="table-of-contents__link toc-highlight">Reasoning Challenges</a></li><li><a href="#learning-challenges" class="table-of-contents__link toc-highlight">Learning Challenges</a></li></ul></li><li><a href="#evaluation-and-benchmarks" class="table-of-contents__link toc-highlight">Evaluation and Benchmarks</a><ul><li><a href="#vla-evaluation-metrics" class="table-of-contents__link toc-highlight">VLA Evaluation Metrics</a></li><li><a href="#benchmark-datasets" class="table-of-contents__link toc-highlight">Benchmark Datasets</a></li></ul></li><li><a href="#looking-ahead" class="table-of-contents__link toc-highlight">Looking Ahead</a></li><li><a href="#exercises" class="table-of-contents__link toc-highlight">Exercises</a></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Physical AI & Humanoid Robotics Course</div></div></div></footer></div>
+</body>
+</html>
